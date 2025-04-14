@@ -28,14 +28,76 @@
                     <li><a href="#interview" class="nav-link">Entrevistas</a></li>
                     <li><a href="#contact" class="nav-link">Contacto</a></li>
                 </ul>
-                <div class="mobile-menu-btn">
+                <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Abrir menú móvil" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
             </nav>
         </div>
     </header>
+    
+    <!-- Menú móvil separado del header -->
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="mobile-menu-header">
+            <span class="mobile-menu-title">Menu</span>
+            <button id="mobile-menu-close" class="mobile-close-btn" aria-label="Cerrar menú">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-menu-links">
+            <li>
+                <a href="#home" class="mobile-menu-link">
+                    <i class="fas fa-home"></i>
+                    <span>Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="#what-is" class="mobile-menu-link">
+                    <i class="fas fa-question-circle"></i>
+                    <span>¿Qué es?</span>
+                </a>
+            </li>
+            <li>
+                <a href="#benefits" class="mobile-menu-link">
+                    <i class="fas fa-award"></i>
+                    <span>Beneficios</span>
+                </a>
+            </li>
+            <li>
+                <a href="#architecture" class="mobile-menu-link">
+                    <i class="fas fa-layer-group"></i>
+                    <span>Arquitectura</span>
+                </a>
+            </li>
+            <li>
+                <a href="#portfolio" class="mobile-menu-link">
+                    <i class="fas fa-rocket"></i>
+                    <span>Portafolio</span>
+                </a>
+            </li>
+            <li>
+                <a href="#transformation" class="mobile-menu-link">
+                    <i class="fas fa-sync-alt"></i>
+                    <span>Transformación</span>
+                </a>
+            </li>
+            <li>
+                <a href="#interview" class="mobile-menu-link">
+                    <i class="fas fa-user-tie"></i>
+                    <span>Entrevistas</span>
+                </a>
+            </li>
+            <li>
+                <a href="#contact" class="mobile-menu-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contacto</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- Fondo oscuro para cuando el menú está abierto -->
+    <div id="mobile-menu-backdrop" class="mobile-menu-backdrop"></div>
 
     <!-- Home Hero Section -->
     <section id="home" class="hero">
@@ -51,13 +113,15 @@
             <div class="hero-image">
                 <div class="bionic-container">
                     <div class="bionic-man">
-                        <!-- Aquí irá la imagen del hombre biónico -->
-                        <div class="placeholder-image">Hombre Biónico</div>
+                        <div class="bionic-card hombre">
+                            <span class="bionic-text">HOMBRE BIÓNICO</span>
+                        </div>
                         <div class="code-particles"></div>
                     </div>
                     <div class="bionic-woman">
-                        <!-- Aquí irá la imagen de la mujer biónica -->
-                        <div class="placeholder-image">Mujer Biónica</div>
+                        <div class="bionic-card mujer">
+                            <span class="bionic-text">MUJER BIÓNICA</span>
+                        </div>
                         <div class="code-particles"></div>
                     </div>
                 </div>
@@ -76,10 +140,10 @@
                     <p>La programación reactiva es como tener muchas cajas, muchos mozos atendiendo en paralelo, sin que nadie se bloquee. Es darle a tu sistema la capacidad de atender a todos sin hacerlos esperar.</p>
     
                     <ul class="feature-list">
-                        <li><i class="circuit-icon"></i> Atiende a miles de usuarios al mismo tiempo</li>
-                        <li><i class="circuit-icon"></i> No se cuelga cuando algo tarda</li>
-                        <li><i class="circuit-icon"></i> Perfecto para sistemas modernos con alto tráfico</li>
-                        <li><i class="circuit-icon"></i> Y sí... también ahorra recursos $$$</li>
+                        <li><i class="fas fa-users circuit-icon"></i> Atiende a miles de usuarios al mismo tiempo</li>
+                        <li><i class="fas fa-bolt circuit-icon"></i> No se cuelga cuando algo tarda</li>
+                        <li><i class="fas fa-chart-line circuit-icon"></i> Perfecto para sistemas modernos con alto tráfico</li>
+                        <li><i class="fas fa-piggy-bank circuit-icon"></i> Y sí... también ahorra recursos $$</li>
                     </ul>
     
                     <p>La reactividad no es solo una moda... es una necesidad cuando quieres APIs rápidas, elegantes y listas para el futuro.</p>
@@ -87,15 +151,15 @@
     
                 <div class="visual-content">
                     <div class="circuit-diagram">
-                        <!-- Aquí irá el diagrama de circuito -->
-                        <div class="placeholder-image">Diagrama de Circuito</div>
+                        <div class="circuit-card">
+                            <span class="circuit-title">DIAGRAMA DE CIRCUITO</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     
-
     <!-- Real Benefits Section -->
     <section id="benefits" class="benefits">
         <div class="container">
@@ -173,7 +237,7 @@
             <div class="portfolio-grid">
                 <div class="portfolio-card">
                     <div class="portfolio-logo">
-                        <div class="placeholder-image">Logo 1</div>
+                        <div class="gradient-circle"></div>
                     </div>
                     <h3>API Reactiva E-commerce</h3>
                     <p>Microservicios con Spring WebFlux y MongoDB Reactive</p>
@@ -181,7 +245,7 @@
                 </div>
                 <div class="portfolio-card">
                     <div class="portfolio-logo">
-                        <div class="placeholder-image">Logo 2</div>
+                        <div class="gradient-circle"></div>
                     </div>
                     <h3>Streaming de Eventos</h3>
                     <p>Sistema de notificaciones con Kafka y Project Reactor</p>
@@ -189,7 +253,7 @@
                 </div>
                 <div class="portfolio-card">
                     <div class="portfolio-logo">
-                        <div class="placeholder-image">Logo 3</div>
+                        <div class="gradient-circle"></div>
                     </div>
                     <h3>Dashboard en Tiempo Real</h3>
                     <p>WebSockets con Reactive MongoDB Change Streams</p>
@@ -197,7 +261,7 @@
                 </div>
                 <div class="portfolio-card">
                     <div class="portfolio-logo">
-                        <div class="placeholder-image">Logo 4</div>
+                        <div class="gradient-circle"></div>
                     </div>
                     <h3>Gateway Reactivo</h3>
                     <p>Spring Cloud Gateway con Circuit Breaker y Rate Limiting</p>
@@ -215,7 +279,7 @@
                 <div class="before">
                     <h3>Antes</h3>
                     <div class="frustrated-devs">
-                        <div class="placeholder-image">Desarrolladores Frustrados</div>
+                        <img src="assets/img/frustrated-devs.webp" alt="Desarrolladores Frustrados" class="responsive-img">
                     </div>
                     <div class="pain-points">
                         <div class="pain-point">"No entiendo las capas ni la arquitectura"</div>
@@ -230,7 +294,7 @@
                 <div class="after">
                     <h3>Después</h3>
                     <div class="bionic-devs">
-                        <div class="placeholder-image">Desarrolladores Biónicos</div>
+                        <img src="assets/img/bionic-devs.webp" alt="Desarrolladores Biónicos" class="responsive-img">
                     </div>
                     <div class="achievements">
                         <div class="achievement">"Ahora diseño APIs escalables y mantenibles"</div>
@@ -263,16 +327,15 @@
                         <div class="question">Explica la diferencia entre bloqueante y no bloqueante</div>
                         <div class="answer">Las operaciones bloqueantes pausan la ejecución del hilo hasta completarse, mientras que las no bloqueantes permiten al hilo continuar con otras tareas y ser notificado cuando la operación termine.</div>
                     </div>
-                    <!-- Más preguntas junior -->
                 </div>
                 <div class="level-content" id="mid-content">
-                    <!-- Contenido Mid-Level -->
+                    <!-- Se carga vía JavaScript -->
                 </div>
                 <div class="level-content" id="senior-content">
-                    <!-- Contenido Senior -->
+                    <!-- Se carga vía JavaScript -->
                 </div>
                 <div class="level-content" id="lead-content">
-                    <!-- Contenido Tech Lead -->
+                    <!-- Se carga vía JavaScript -->
                 </div>
             </div>
         </div>
@@ -283,11 +346,11 @@
         <div class="container">
             <h2 class="section-title">Conecta con <span class="highlight">WorldReactive</span></h2>
             <div class="contact-links">
-                <a href="https://github.com" target="_blank" class="contact-link">
+                <a href="https://github.com" target="_blank" rel="noopener" class="contact-link">
                     <i class="fab fa-github"></i>
                     <span>GitHub</span>
                 </a>
-                <a href="https://linkedin.com" target="_blank" class="contact-link">
+                <a href="https://linkedin.com" target="_blank" rel="noopener" class="contact-link">
                     <i class="fab fa-linkedin"></i>
                     <span>LinkedIn</span>
                 </a>
@@ -295,7 +358,7 @@
                     <i class="fas fa-envelope"></i>
                     <span>Email</span>
                 </a>
-                <a href="https://twitter.com" target="_blank" class="contact-link">
+                <a href="https://twitter.com" target="_blank" rel="noopener" class="contact-link">
                     <i class="fab fa-twitter"></i>
                     <span>Twitter</span>
                 </a>
