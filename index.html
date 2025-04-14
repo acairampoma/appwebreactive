@@ -15,6 +15,12 @@
     <header class="header">
         <div class="container">
             <nav class="nav">
+                <!-- Mover el botón hamburguesa a la izquierda -->
+                <button id="hamburger" class="hamburger" aria-label="Abrir menú móvil" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <div class="logo">
                     <span class="logo-text">WORLD<span class="reactive">REACTIVE</span></span>
                 </div>
@@ -28,74 +34,21 @@
                     <li><a href="#interview" class="nav-link">Entrevistas</a></li>
                     <li><a href="#contact" class="nav-link">Contacto</a></li>
                 </ul>
-                <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Abrir menú móvil" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
             </nav>
         </div>
     </header>
     
-    <!-- Menú móvil separado del header -->
-    <div id="mobile-menu" class="mobile-menu">
-        <div class="mobile-menu-header">
-            <span class="mobile-menu-title">Menu</span>
-            <button id="mobile-menu-close" class="mobile-close-btn" aria-label="Cerrar menú">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <ul class="mobile-menu-links">
-            <li>
-                <a href="#home" class="mobile-menu-link">
-                    <i class="fas fa-home"></i>
-                    <span>Inicio</span>
-                </a>
-            </li>
-            <li>
-                <a href="#what-is" class="mobile-menu-link">
-                    <i class="fas fa-question-circle"></i>
-                    <span>¿Qué es?</span>
-                </a>
-            </li>
-            <li>
-                <a href="#benefits" class="mobile-menu-link">
-                    <i class="fas fa-award"></i>
-                    <span>Beneficios</span>
-                </a>
-            </li>
-            <li>
-                <a href="#architecture" class="mobile-menu-link">
-                    <i class="fas fa-layer-group"></i>
-                    <span>Arquitectura</span>
-                </a>
-            </li>
-            <li>
-                <a href="#portfolio" class="mobile-menu-link">
-                    <i class="fas fa-rocket"></i>
-                    <span>Portafolio</span>
-                </a>
-            </li>
-            <li>
-                <a href="#transformation" class="mobile-menu-link">
-                    <i class="fas fa-sync-alt"></i>
-                    <span>Transformación</span>
-                </a>
-            </li>
-            <li>
-                <a href="#interview" class="mobile-menu-link">
-                    <i class="fas fa-user-tie"></i>
-                    <span>Entrevistas</span>
-                </a>
-            </li>
-            <li>
-                <a href="#contact" class="mobile-menu-link">
-                    <i class="fas fa-envelope"></i>
-                    <span>Contacto</span>
-                </a>
-            </li>
-        </ul>
-    </div>
+    <!-- Menú móvil estilo acordeón -->
+    <ul class="menu" id="menu">
+        <li><a href="#home"><i class="fas fa-home"></i> Inicio</a></li>
+        <li><a href="#what-is"><i class="fas fa-question-circle"></i> ¿Qué es?</a></li>
+        <li><a href="#benefits"><i class="fas fa-award"></i> Beneficios</a></li>
+        <li><a href="#architecture"><i class="fas fa-layer-group"></i> Arquitectura</a></li>
+        <li><a href="#portfolio"><i class="fas fa-rocket"></i> Portafolio</a></li>
+        <li><a href="#transformation"><i class="fas fa-sync-alt"></i> Transformación</a></li>
+        <li><a href="#interview"><i class="fas fa-user-tie"></i> Entrevistas</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contacto</a></li>
+    </ul>
     <!-- Fondo oscuro para cuando el menú está abierto -->
     <div id="mobile-menu-backdrop" class="mobile-menu-backdrop"></div>
 
@@ -382,6 +335,6 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
