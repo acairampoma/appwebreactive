@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pildora Informativa: Principios SOLID</title>
+    <link rel="stylesheet" href="pildora02.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="nav-header">
+        <div class="logo">
+            <span class="world">WORLD</span><span class="reactive">REACTIVE</span>
+        </div>
+        <a href="../index.html" class="back-button" title="Volver a la pagina principal"><i class="fas fa-chevron-left"></i></a>
+    </div>
+    
+    <div class="pildora">
+        <div class="pildora-header">
+            <h1 class="pildora-title">Principios SOLID</h1>
+            <div class="pildora-subtitle">La base para un codigo robusto y mantenible</div>
+        </div>
+        
+        <div class="pildora-content">
+            <div class="definition-box">
+                <p><strong>¿Que son los Principios SOLID?</strong> Son cinco principios de diseno orientado a objetos que, cuando se aplican juntos, hacen que el codigo sea mas mantenible, flexible y facil de entender. El acronimo SOLID fue acunado por Robert C. Martin (Uncle Bob).</p>
+            </div>
+            
+            <div class="solid-intro">
+                <h2>SOLID: El Cimiento de un Buen Codigo</h2>
+                <p>Imagina que estas construyendo un edificio. Si los cimientos no son solidos, todo se vendra abajo eventualmente. Lo mismo ocurre con el software.</p>
+                <p>Los principios SOLID son como las reglas de la buena construccion, pero para tu codigo.</p>
+            </div>
+            
+            <div class="principios-grid">
+                <div class="principio-card">
+                    <div class="principio-header">
+                        <div class="letra">S</div>
+                        <h3>Single Responsibility Principle</h3>
+                    </div>
+                    <div class="principio-content">
+                        <div class="principio-definicion">
+                            <p><strong>Principio de Responsabilidad Unica</strong></p>
+                            <p>"Una clase debe tener una, y solo una, razon para cambiar."</p>
+                        </div>
+                        <div class="principio-ejemplo">
+                            <h4>Ejemplo en la vida real:</h4>
+                            <p>Un cocinero en un restaurante se especializa en preparar platos, no en tomar ordenes, lavar platos y cobrar a los clientes.</p>
+                        </div>
+                        <div class="principio-codigo-container">
+                            <div class="principio-codigo-row">
+                                <div class="principio-codigo-col">
+                                    <h4>Mal ejemplo:</h4>
+                                    <pre class="code-bad">class Usuario {
+    // Datos del usuario
+    private String nombre;
+    private String email;
+    
+    // Guardar usuario (responsabilidad de persistencia)
+    public void guardarEnBaseDeDatos() { ... }
+    
+    // Enviar email (responsabilidad de comunicacion)
+    public void enviarEmailBienvenida() { ... }
+    
+    // Validar datos (responsabilidad de validacion)
+    public boolean validarEmail() { ... }
+}</pre>
+                                </div>
+                                <div class="principio-codigo-col">
+                                    <h4>Buen ejemplo:</h4>
+                                    <pre class="code-good">class Usuario {
+    private String nombre;
+    private String email;
+    // Solo getters y setters
+}
+
+class UsuarioRepository {
+    public void guardar(Usuario usuario) { ... }
+}
+
+class EmailService {
+    public void enviarBienvenida(Usuario usuario) { ... }
+}
+
+class ValidadorUsuario {
+    public boolean validarEmail(String email) { ... }
+}</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="principio-card">
+                    <div class="principio-header">
+                        <div class="letra">O</div>
+                        <h3>Open/Closed Principle</h3>
+                    </div>
+                    <div class="principio-content">
+                        <div class="principio-definicion">
+                            <p><strong>Principio Abierto/Cerrado</strong></p>
+                            <p>"Las entidades de software deben estar abiertas para su extension, pero cerradas para su modificacion."</p>
+                        </div>
+                        <div class="principio-ejemplo">
+                            <h4>Ejemplo en la vida real:</h4>
+                            <p>Un control remoto universal que puede programarse para nuevos dispositivos sin tener que cambiar su diseno interno.</p>
+                        </div>
+                        <div class="principio-codigo-container">
+                            <div class="principio-codigo-row">
+                                <div class="principio-codigo-col">
+                                    <h4>Mal ejemplo:</h4>
+                                    <pre class="code-bad">class CalculadoraImpuestos {
+    public double calcularImpuesto(Producto producto) {
+        if (producto.tipo == "ALIMENTO") {
+            return producto.precio * 0.07;
+        } else if (producto.tipo == "ELECTRONICO") {
+            return producto.precio * 0.18;
+        }
+        // Si anadimos un nuevo tipo, tenemos que modificar esta clase
+        return 0;
+    }
+}</pre>
+                                </div>
+                                <div class="principio-codigo-col">
+                                    <h4>Buen ejemplo:</h4>
+                                    <pre class="code-good">interface CalculadorImpuesto {
+    double calcularImpuesto(double precio);
+}
+
+class ImpuestoAlimentos implements CalculadorImpuesto {
+    public double calcularImpuesto(double precio) {
+        return precio * 0.07;
+    }
+}
+
+class ImpuestoElectronicos implements CalculadorImpuesto {
+    public double calcularImpuesto(double precio) {
+        return precio * 0.18;
+    }
+}
+
+// Para anadir un nuevo tipo, solo creamos una nueva clase
+class ImpuestoRopa implements CalculadorImpuesto {
+    public double calcularImpuesto(double precio) {
+        return precio * 0.12;
+    }
+}</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="principio-card">
+                    <div class="principio-header">
+                        <div class="letra">L</div>
+                        <h3>Liskov Substitution Principle</h3>
+                    </div>
+                    <div class="principio-content">
+                        <div class="principio-definicion">
+                            <p><strong>Principio de Sustitucion de Liskov</strong></p>
+                            <p>"Las clases derivadas deben poder sustituir a sus clases base sin alterar el comportamiento esperado."</p>
+                        </div>
+                        <div class="principio-ejemplo">
+                            <h4>Ejemplo en la vida real:</h4>
+                            <p>Si reemplazas a un chef con su aprendiz, los clientes deben seguir recibiendo comida de la misma calidad.</p>
+                        </div>
+                        <div class="principio-codigo-container">
+                            <div class="principio-codigo-row">
+                                <div class="principio-codigo-col">
+                                    <h4>Mal ejemplo:</h4>
+                                    <pre class="code-bad">class Ave {
+    public void volar() {
+        System.out.println("Volando...");
+    }
+}
+
+class Pinguino extends Ave {
+    @Override
+    public void volar() {
+        // Los pinguinos no pueden volar, esto rompe el principio
+        throw new UnsupportedOperationException("Los pinguinos no vuelan");
+    }
+}</pre>
+                                </div>
+                                <div class="principio-codigo-col">
+                                    <h4>Buen ejemplo:</h4>
+                                    <pre class="code-good">interface Ave {
+    void moverse();
+}
+
+class AveVoladora implements Ave {
+    public void moverse() {
+        System.out.println("Volando...");
+    }
+}
+
+class Pinguino implements Ave {
+    public void moverse() {
+        System.out.println("Nadando y caminando...");
+    }
+}</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="principio-card">
+                    <div class="principio-header">
+                        <div class="letra">I</div>
+                        <h3>Interface Segregation Principle</h3>
+                    </div>
+                    <div class="principio-content">
+                        <div class="principio-definicion">
+                            <p><strong>Principio de Segregacion de Interfaces</strong></p>
+                            <p>"Los clientes no deben verse forzados a depender de interfaces que no utilizan."</p>
+                        </div>
+                        <div class="principio-ejemplo">
+                            <h4>Ejemplo en la vida real:</h4>
+                            <p>Un smartphone moderno tiene muchas funciones, pero un usuario mayor quizas solo quiera hacer llamadas y enviar mensajes, no necesita todas las opciones avanzadas.</p>
+                        </div>
+                        <div class="principio-codigo-container">
+                            <div class="principio-codigo-row">
+                                <div class="principio-codigo-col">
+                                    <h4>Mal ejemplo:</h4>
+                                    <pre class="code-bad">interface Trabajador {
+    void trabajar();
+    void comer();
+    void dormir();
+}
+
+// Un robot puede trabajar pero no necesita comer ni dormir
+class Robot implements Trabajador {
+    public void trabajar() {
+        // Implementacion
+    }
+    
+    public void comer() {
+        // Los robots no comen, metodo vacio o excepcion
+    }
+    
+    public void dormir() {
+        // Los robots no duermen, metodo vacio o excepcion
+    }
+}</pre>
+                                </div>
+                                <div class="principio-codigo-col">
+                                    <h4>Buen ejemplo:</h4>
+                                    <pre class="code-good">interface Trabajable {
+    void trabajar();
+}
+
+interface Comedor {
+    void comer();
+}
+
+interface Durmiente {
+    void dormir();
+}
+
+class Humano implements Trabajable, Comedor, Durmiente {
+    // Implementa todos los metodos
+}
+
+class Robot implements Trabajable {
+    // Solo implementa lo que necesita
+    public void trabajar() {
+        // Implementacion
+    }
+}</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="principio-card">
+                    <div class="principio-header">
+                        <div class="letra">D</div>
+                        <h3>Dependency Inversion Principle</h3>
+                    </div>
+                    <div class="principio-content">
+                        <div class="principio-definicion">
+                            <p><strong>Principio de Inversion de Dependencias</strong></p>
+                            <p>"Los modulos de alto nivel no deben depender de modulos de bajo nivel. Ambos deben depender de abstracciones."</p>
+                        </div>
+                        <div class="principio-ejemplo">
+                            <h4>Ejemplo en la vida real:</h4>
+                            <p>Cuando enchufas un aparato, no te preocupas por como se genera la electricidad (carbon, nuclear, solar). El enchufe es una abstraccion que permite que todo funcione sin conocer los detalles.</p>
+                        </div>
+                        <div class="principio-codigo-container">
+                            <div class="principio-codigo-row">
+                                <div class="principio-codigo-col">
+                                    <h4>Mal ejemplo:</h4>
+                                    <pre class="code-bad">class NotificadorEmail {
+    public void enviar(String mensaje, String destinatario) {
+        // Logica para enviar email
+    }
+}
+
+class ServicioNotificacion {
+    private NotificadorEmail notificador = new NotificadorEmail();
+    
+    public void notificarUsuario(Usuario usuario, String mensaje) {
+        // Dependencia directa a una implementacion concreta
+        notificador.enviar(mensaje, usuario.getEmail());
+    }
+}</pre>
+                                </div>
+                                <div class="principio-codigo-col">
+                                    <h4>Buen ejemplo:</h4>
+                                    <pre class="code-good">interface Notificador {
+    void enviar(String mensaje, String destinatario);
+}
+
+class NotificadorEmail implements Notificador {
+    public void enviar(String mensaje, String destinatario) {
+        // Logica para enviar email
+    }
+}
+
+class NotificadorSMS implements Notificador {
+    public void enviar(String mensaje, String destinatario) {
+        // Logica para enviar SMS
+    }
+}
+
+class ServicioNotificacion {
+    private final Notificador notificador;
+    
+    // Inyeccion de dependencia
+    public ServicioNotificacion(Notificador notificador) {
+        this.notificador = notificador;
+    }
+    
+    public void notificarUsuario(Usuario usuario, String mensaje) {
+        notificador.enviar(mensaje, usuario.getContacto());
+    }
+}</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="beneficios-section">
+                <h2><i class="fas fa-award"></i> Beneficios de Aplicar SOLID</h2>
+                <div class="beneficios-grid">
+                    <div class="beneficio">
+                        <i class="fas fa-tools"></i>
+                        <h3>Mantenibilidad</h3>
+                        <p>Codigo mas facil de mantener y actualizar con el tiempo.</p>
+                    </div>
+                    <div class="beneficio">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                        <h3>Escalabilidad</h3>
+                        <p>Facilita el crecimiento de la aplicacion sin reescribir grandes partes.</p>
+                    </div>
+                    <div class="beneficio">
+                        <i class="fas fa-bug"></i>
+                        <h3>Menos Bugs</h3>
+                        <p>Codigo mas predecible y con menos efectos secundarios inesperados.</p>
+                    </div>
+                    <div class="beneficio">
+                        <i class="fas fa-vial"></i>
+                        <h3>Testabilidad</h3>
+                        <p>Facilita la escritura de pruebas unitarias efectivas.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="conclusion-section">
+                <p>Los principios SOLID no son reglas rigidas, sino guias para escribir mejor codigo. Recuerda:</p>
+                <ul class="conclusion-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Aplicalos con sentido comun</strong> - No fuerces los principios donde no son necesarios</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Evolucion gradual</strong> - Mejora tu codigo paso a paso, no intentes hacerlo perfecto de inmediato</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Balance</strong> - A veces, un poco de pragmatismo es mejor que el purismo teorico</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        © 2025 WorldReactive. Todos los derechos reservados.
+    </footer>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pildora Informativa: Tipos de Patrones</title>
+    <link rel="stylesheet" href="pildora02.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="nav-header">
+        <div class="logo">
+            <span class="world">WORLD</span><span class="reactive">REACTIVE</span>
+        </div>
+        <a href="../index.html" class="back-button" title="Volver a la pagina principal"><i class="fas fa-chevron-left"></i></a>
+    </div>
+    
+    <div class="pildora">
+        <div class="pildora-header">
+            <h1 class="pildora-title">Tipos de Patrones</h1>
+            <div class="pildora-subtitle">Soluciones probadas para problemas comunes</div>
+        </div>
+        
+        <div class="pildora-content">
+            <div class="definition-box">
+                <p><strong>¿Que son los Patrones de Diseno?</strong> Son soluciones estandar para problemas comunes en el diseno de software. Son como recetas probadas que los desarrolladores pueden adaptar para resolver problemas especificos en sus aplicaciones.</p>
+            </div>
+            
+            <div class="patrones-section">
+                <h2>Los Patrones como Herramientas de Construccion</h2>
+                <p>Imagina que estas construyendo una casa. No inventarias nuevas formas de hacer cimientos o instalar ventanas cada vez, ¿verdad? Usarias tecnicas probadas por generaciones de constructores.</p>
+                <p>Los patrones de diseno son exactamente eso: tecnicas probadas para construir software de calidad.</p>
+                
+                <h3><i class="fas fa-layer-group"></i> Categorias Principales</h3>
+                <div class="categorias-grid">
+                    
+                    <div class="categoria-card">
+                        <div class="categoria-header creacionales">
+                            <i class="fas fa-baby"></i>
+                            <h4>Patrones Creacionales</h4>
+                        </div>
+                        <div class="categoria-content">
+                            <p>Se encargan de la creacion de objetos, ayudando a hacer un sistema independiente de como se crean, componen y representan sus objetos.</p>
+                            <div class="ejemplos">
+                                <h5>Ejemplos:</h5>
+                                <div class="ejemplos-grid">
+                                    <div class="ejemplo-item"><strong>Singleton:</strong> Garantiza que una clase tenga una unica instancia y proporciona un punto de acceso global a ella.</div>
+                                    <div class="ejemplo-item"><strong>Factory Method:</strong> Define una interfaz para crear un objeto, pero deja que las subclases decidan que clase instanciar.</div>
+                                    <div class="ejemplo-item"><strong>Builder:</strong> Separa la construccion de un objeto complejo de su representacion.</div>
+                                </div>
+                            </div>
+                            <div class="analogia">
+                                <i class="fas fa-lightbulb"></i>
+                                <p>Como una fabrica de autos: diferentes lineas de produccion (patrones) para crear diferentes modelos (objetos).</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="categoria-card">
+                        <div class="categoria-header estructurales">
+                            <i class="fas fa-cubes"></i>
+                            <h4>Patrones Estructurales</h4>
+                        </div>
+                        <div class="categoria-content">
+                            <p>Se ocupan de como se componen las clases y objetos para formar estructuras mas grandes y complejas.</p>
+                            <div class="ejemplos">
+                                <h5>Ejemplos:</h5>
+                                <div class="ejemplos-grid">
+                                    <div class="ejemplo-item"><strong>Adapter:</strong> Permite que interfaces incompatibles trabajen juntas, como un adaptador de enchufe de viaje.</div>
+                                    <div class="ejemplo-item"><strong>Decorator:</strong> Anade responsabilidades adicionales a un objeto dinamicamente.</div>
+                                    <div class="ejemplo-item"><strong>Composite:</strong> Compone objetos en estructuras de arbol para representar jerarquias parte-todo.</div>
+                                </div>
+                            </div>
+                            <div class="analogia">
+                                <i class="fas fa-lightbulb"></i>
+                                <p>Como construir con LEGO: diferentes piezas (objetos) se combinan para crear estructuras complejas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="categoria-card">
+                        <div class="categoria-header comportamiento">
+                            <i class="fas fa-cogs"></i>
+                            <h4>Patrones de Comportamiento</h4>
+                        </div>
+                        <div class="categoria-content">
+                            <p>Se centran en la comunicacion entre objetos, como interactuan y se distribuyen responsabilidades.</p>
+                            <div class="ejemplos">
+                                <h5>Ejemplos:</h5>
+                                <div class="ejemplos-grid">
+                                    <div class="ejemplo-item"><strong>Observer:</strong> Define una dependencia uno-a-muchos entre objetos, de forma que cuando un objeto cambia de estado, todos sus dependientes son notificados.</div>
+                                    <div class="ejemplo-item"><strong>Strategy:</strong> Define una familia de algoritmos, encapsula cada uno, y los hace intercambiables.</div>
+                                    <div class="ejemplo-item"><strong>Command:</strong> Encapsula una solicitud como un objeto, permitiendo parametrizar clientes con diferentes solicitudes.</div>
+                                </div>
+                            </div>
+                            <div class="analogia">
+                                <i class="fas fa-lightbulb"></i>
+                                <p>Como un equipo de futbol: cada jugador (objeto) tiene un rol y se comunica con otros para lograr un objetivo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="patrones-modernos">
+                    <h3><i class="fas fa-rocket"></i> Patrones Modernos para Aplicaciones Reactivas</h3>
+                    
+                    <div class="moderno-card">
+                        <div class="moderno-icon"><i class="fas fa-project-diagram"></i></div>
+                        <div class="moderno-content">
+                            <h4>Circuit Breaker</h4>
+                            <p>Previene que una aplicacion intente repetidamente una operacion que probablemente fallara. Como un interruptor electrico que salta cuando hay sobrecarga.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="moderno-card">
+                        <div class="moderno-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="moderno-content">
+                            <h4>Bulkhead</h4>
+                            <p>Aislamiento de fallos en componentes, evitando que un fallo en una parte afecte a otras. Como los compartimentos estancos de un barco.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="moderno-card">
+                        <div class="moderno-icon"><i class="fas fa-redo"></i></div>
+                        <div class="moderno-content">
+                            <h4>Retry</h4>
+                            <p>Reintentar una operacion fallida con una estrategia inteligente (espera exponencial, jitter). Como volver a marcar un numero ocupado.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="moderno-card">
+                        <div class="moderno-icon"><i class="fas fa-hourglass-half"></i></div>
+                        <div class="moderno-content">
+                            <h4>Timeout</h4>
+                            <p>Establecer limites de tiempo para operaciones, cancelando las que tardan demasiado. Como un cronometro para cada tarea.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="conclusion-section">
+                    <p>Los patrones de diseno son herramientas poderosas, pero recuerda:</p>
+                    <ul class="conclusion-list">
+                        <li><i class="fas fa-check-circle"></i> <strong>No son soluciones magicas</strong> - Deben aplicarse en el contexto adecuado</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>No abuses de ellos</strong> - A veces una solucion simple es mejor que un patron complejo</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Conoce tu caja de herramientas</strong> - Cuantos mas patrones conozcas, mejores decisiones tomaras</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="code-example">
+                <h3>Ejemplo: Patron Observer en Java</h3>
+                <pre>
+<span class="code-comment">// Interfaz para los observadores</span>
+interface Observer {
+    void update(String message);
+}
+
+<span class="code-comment">// Implementacion concreta de un observador</span>
+<span class="code-comment">// Implementacion concreta de un observador</span>
+class Cliente implements Observer {
+    private String nombre;
+    
+    public Cliente(String nombre) {
+        this.nombre = nombre;
+    }
+    
+    @Override
+    public void update(String message) {
+        System.out.println(nombre + " recibio notificacion: " + message);
+    }
+}
+
+<span class="code-comment">// Clase observable (sujeto)</span>
+class TiendaOnline {
+    private List<Observer> clientes = new ArrayList<>();
+    private String nombreTienda;
+    
+    public TiendaOnline(String nombre) {
+        this.nombreTienda = nombre;
+    }
+    
+    <span class="code-comment">// Registrar un nuevo observador</span>
+    public void suscribir(Observer cliente) {
+        clientes.add(cliente);
+    }
+    
+    <span class="code-comment">// Eliminar un observador</span>
+    public void desuscribir(Observer cliente) {
+        clientes.remove(cliente);
+    }
+    
+    <span class="code-comment">// Notificar a todos los observadores</span>
+    public void notificarOferta(String producto) {
+        String mensaje = "Nueva oferta en " + producto + " en " + nombreTienda + "!";
+        for(Observer cliente : clientes) {
+            cliente.update(mensaje);
+        }
+    }
+}
+
+<span class="code-comment">// Uso del patru00f3n</span>
+public class Main {
+    public static void main(String[] args) {
+        TiendaOnline miTienda = new TiendaOnline("TechPeru");
+        
+        Cliente carlos = new Cliente("Carlos");
+        Cliente maria = new Cliente("Maria");
+        Cliente jose = new Cliente("Jose");
+        
+        miTienda.suscribir(carlos);
+        miTienda.suscribir(maria);
+        miTienda.suscribir(jose);
+        
+        miTienda.notificarOferta("Laptops Gaming");
+        
+        <span class="code-comment">// Maria se desuscribe</span>
+        miTienda.desuscribir(maria);
+        
+        miTienda.notificarOferta("Smartphones");
+    }
+}
+                </pre>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        © 2025 WorldReactive. Todos los derechos reservados.
+    </footer>
+</body>
+</html>

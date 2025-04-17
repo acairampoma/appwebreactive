@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Píldora Informativa: Programación Funcional</title>
+    <link rel="stylesheet" href="pildora00.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="nav-header">
+        <div class="logo">
+            <span class="world">WORLD</span><span class="reactive">REACTIVE</span>
+        </div>
+        <a href="../index.html" class="back-button" title="Volver a la página principal"><i class="fas fa-chevron-left"></i></a>
+    </div>
+    
+    <div class="pildora">
+        <div class="pildora-header">
+            <h1 class="pildora-title">Programación Funcional</h1>
+            <div class="pildora-subtitle">Una noche de juerga con funciones</div>
+        </div>
+        
+        <div class="pildora-content">
+            <div class="definition-box">
+                <p><strong>¿Qué es la Programación Funcional?</strong> Es un paradigma de programación que trata la computación como la evaluación de funciones matemáticas y evita cambiar el estado y los datos mutables. En términos simples: cada función hace una sola cosa, la hace bien, y no afecta nada más.</p>
+            </div>
+            
+            <div class="fiesta-section">
+                <h2>La Programación Funcional: Una Noche de Juerga</h2>
+                <p>Imagina la programación funcional como una noche de fiesta bien organizada:</p>
+                
+                <div class="local-section">
+                    <h3><i class="fas fa-glass-cheers"></i> El Local de Fiesta</h3>
+                    <p>Las <strong>Funciones Puras</strong> son como bartenders profesionales: siempre que pides un "Cuba Libre" con los mismos ingredientes, te entregan exactamente la misma bebida. No guardan información de clientes anteriores ni cambian la receta a mitad de noche.</p>
+                </div>
+                
+                <div class="asistentes-grid">
+                    <h3><i class="fas fa-users"></i> Los Asistentes</h3>
+                    
+                    <div class="asistente-card">
+                        <div class="asistente-icon"><i class="fas fa-user-shield"></i></div>
+                        <div class="asistente-content">
+                            <h4>El Portero (Predicate)</h4>
+                            <p>Solo hace una cosa: mira tu DNI y decide SI o NO entras. No te cobra, no te sirve tragos, solo verifica y decide.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="asistente-card">
+                        <div class="asistente-icon"><i class="fas fa-music"></i></div>
+                        <div class="asistente-content">
+                            <h4>El DJ (Function)</h4>
+                            <p>Recibe tus peticiones de canciones y las transforma en música. Le das el nombre de una canción y te devuelve ritmos para bailar.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="asistente-card">
+                        <div class="asistente-icon"><i class="fas fa-concierge-bell"></i></div>
+                        <div class="asistente-content">
+                            <h4>El Camarero (Consumer)</h4>
+                            <p>Toma tu orden pero no te devuelve nada inmediatamente - simplemente se lleva tu pedido a la barra.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="asistente-card">
+                        <div class="asistente-icon"><i class="fas fa-cocktail"></i></div>
+                        <div class="asistente-content">
+                            <h4>La Máquina de Chupitos (Supplier)</h4>
+                            <p>No necesita que le des nada, solo aprietas un botón y te da un shot.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="asistente-card">
+                        <div class="asistente-icon"><i class="fas fa-glass-martini-alt"></i></div>
+                        <div class="asistente-content">
+                            <h4>El Barman (BiFunction)</h4>
+                            <p>Recibe dos cosas (un tipo de licor y un mixer) y te devuelve un cóctel completamente diferente.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dinamica-section">
+                    <h3><i class="fas fa-random"></i> La Dinámica</h3>
+                    <p>Lo divertido de esta fiesta es que cada persona tiene <strong>UN SOLO TRABAJO</strong> y lo hace bien. No hay meseros que también cobren la entrada o DJs que preparen tragos.</p>
+                    <p>Y la magia ocurre cuando todos trabajan juntos, en cadena:</p>
+                    
+                    <div class="cadena-pasos">
+                        <div class="paso">
+                            <div class="paso-numero">1</div>
+                            <div class="paso-content">El Portero verifica tu edad <span class="tipo">(Predicate)</span></div>
+                        </div>
+                        <div class="paso">
+                            <div class="paso-numero">2</div>
+                            <div class="paso-content">La Máquina te da un chupito de bienvenida <span class="tipo">(Supplier)</span></div>
+                        </div>
+                        <div class="paso">
+                            <div class="paso-numero">3</div>
+                            <div class="paso-content">El DJ transforma tu petición en música <span class="tipo">(Function)</span></div>
+                        </div>
+                        <div class="paso">
+                            <div class="paso-numero">4</div>
+                            <div class="paso-content">Los camareros recogen los vasos vacíos <span class="tipo">(Consumer)</span></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="conclusion-section">
+                    <p>Así funciona la programación funcional – dividiendo todo en funciones especializadas que hacen una cosa bien y pueden combinarse para crear una experiencia completa.</p>
+                    <p>Y al final de la noche, aunque la fiesta fue épica, el local vuelve a su estado original (<strong>inmutabilidad</strong>) – listo para la siguiente noche sin arrastrar problemas de fiestas anteriores.</p>
+                </div>
+            </div>
+            
+            <div class="code-example">
+                <h3>Ejemplo en código</h3>
+                <pre>
+<span class="code-comment">// Ejemplo de una noche de fiesta funcional en JavaScript</span>
+
+<span class="code-keyword">// El Portero (Predicate)</span>
+const portero = edad => edad >= 18;
+
+<span class="code-keyword">// La Máquina de Chupitos (Supplier)</span>
+const maquinaChupitos = () => "Shot de Pisco";
+
+<span class="code-keyword">// El DJ (Function)</span>
+const dj = cancion => `Ritmo de ${cancion} para bailar`;
+
+<span class="code-keyword">// El Camarero (Consumer)</span>
+const camarero = orden => {
+    console.log(`Llevando ${orden} a la barra...`);
+};
+
+<span class="code-keyword">// El Barman (BiFunction)</span>
+const barman = (licor, mixer) => `Cóctel de ${licor} con ${mixer}`;
+
+<span class="code-comment">// La fiesta en acción</span>
+const cliente = {
+    nombre: "Carlos",
+    edad: 25,
+    cancionFavorita: "Salsa Perucha"
+};
+
+<span class="code-comment">// Cadena de funciones</span>
+if (portero(cliente.edad)) {
+    const bienvenida = maquinaChupitos();
+    console.log(`Bienvenido ${cliente.nombre}, aquí tienes: ${bienvenida}`);
+    
+    const musica = dj(cliente.cancionFavorita);
+    console.log(musica);
+    
+    const cocktail = barman("Pisco", "Maracuyá");
+    camarero(cocktail);
+} else {
+    console.log("Lo siento, no puedes entrar a la fiesta");
+}
+                </pre>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        © 2025 WorldReactive. Todos los derechos reservados.
+    </footer>
+</body>
+</html>
