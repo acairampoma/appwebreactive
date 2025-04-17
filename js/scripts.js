@@ -6,6 +6,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const menu = document.getElementById('menu');
     const backdrop = document.getElementById('mobile-menu-backdrop');
     
+
+    // Elementos de las pestañas
+    const levelTabs = document.querySelectorAll('.level-tab');
+    const levelContents = document.querySelectorAll('.level-content');
+    
     console.log("Hamburger element:", hamburger);
     console.log("Menu element:", menu);
     console.log("Backdrop element:", backdrop);
@@ -48,4 +53,26 @@ document.addEventListener('DOMContentLoaded', function() {
             backdrop.classList.remove('active');
         });
     });
+
+
+    // Event listeners para las pestañas
+    levelTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const level = tab.getAttribute('data-level');
+            
+            // Actualizar pestañas activas
+            levelTabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            
+            // Actualizar contenido activo
+            levelContents.forEach(content => {
+                content.classList.remove('active');
+                if (content.id === `${level}-content`) {
+                    content.classList.add('active');
+                }
+            });
+        });
+    });
+    
+
 });

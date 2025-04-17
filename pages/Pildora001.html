@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Píldora Informativa: Interfaces Funcionales</title>
+    <link rel="stylesheet" href="pildora01.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="nav-header">
+        <div class="logo">
+            <span class="world">WORLD</span><span class="reactive">REACTIVE</span>
+        </div>
+    </div>
+    
+    <div class="pildora">
+        <div class="pildora-header">
+            <h1 class="pildora-title">Interfaces Funcionales</h1>
+            <div class="pildora-subtitle">La base de la programación funcional en Java</div>
+        </div>
+        
+        <div class="pildora-content">
+            <div class="definition-box">
+                <p><strong>¿Qué es una Interfaz Funcional?</strong> Es una interfaz que contiene <strong>exactamente un método abstracto</strong>. Estas interfaces son la base de la programación funcional en Java, permitiéndonos tratar el comportamiento como un valor y pasar funciones como parámetros.</p>
+            </div>
+            
+            <div class="interfaces-grid">
+                <div class="interface-card predicate-card">
+                    <div class="card-header">PREDICATE</div>
+                    <div class="card-content">
+                        <div class="io-section">
+                            <div class="io-label">Recibe:</div>
+                            <div class="io-value">Cualquier cosa</div>
+                        </div>
+                        <div class="io-section">
+                            <div class="io-label">Devuelve:</div>
+                            <div class="io-value">Solo true o false</div>
+                        </div>
+                        <div class="example-section">
+                            <i class="fas fa-check-circle example-icon"></i>
+                            <span class="example-text">Cliente envía DNI "12345678" → Sistema verifica → Devuelve TRUE → Continúa operación</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="interface-card function-card">
+                    <div class="card-header">FUNCTION</div>
+                    <div class="card-content">
+                        <div class="io-section">
+                            <div class="io-label">Recibe:</div>
+                            <div class="io-value">Cualquier cosa</div>
+                        </div>
+                        <div class="io-section">
+                            <div class="io-label">Devuelve:</div>
+                            <div class="io-value">Cualquier otra cosa</div>
+                        </div>
+                        <div class="example-section">
+                            <i class="fas fa-exchange-alt example-icon"></i>
+                            <span class="example-text">Sistema recibe Cliente "María" → Procesa datos → Devuelve "003102938470055" como código CCI</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="interface-card consumer-card">
+                    <div class="card-header">CONSUMER</div>
+                    <div class="card-content">
+                        <div class="io-section">
+                            <div class="io-label">Recibe:</div>
+                            <div class="io-value">Cualquier cosa</div>
+                        </div>
+                        <div class="io-section">
+                            <div class="io-label">Devuelve:</div>
+                            <div class="io-value">NADA</div>
+                        </div>
+                        <div class="example-section">
+                            <i class="fas fa-paper-plane example-icon"></i>
+                            <span class="example-text">Sistema recibe Cuenta #12345 → Envía SMS "Su depósito fue procesado" → No devuelve nada</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="interface-card supplier-card">
+                    <div class="card-header">SUPPLIER</div>
+                    <div class="card-content">
+                        <div class="io-section">
+                            <div class="io-label">Recibe:</div>
+                            <div class="io-value">NADA</div>
+                        </div>
+                        <div class="io-section">
+                            <div class="io-label">Devuelve:</div>
+                            <div class="io-value">Cualquier cosa</div>
+                        </div>
+                        <div class="example-section">
+                            <i class="fas fa-magic example-icon"></i>
+                            <span class="example-text">Usuario presiona "Generar" → Sin datos de entrada → Sistema produce "OPE8742LIM" como código</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="interface-card bifunction-card">
+                    <div class="card-header">BIFUNCTION</div>
+                    <div class="card-content">
+                        <div class="io-section">
+                            <div class="io-label">Recibe:</div>
+                            <div class="io-value">Dos cosas de cualquier tipo</div>
+                        </div>
+                        <div class="io-section">
+                            <div class="io-label">Devuelve:</div>
+                            <div class="io-value">Cualquier otra cosa</div>
+                        </div>
+                        <div class="example-section">
+                            <i class="fas fa-cogs example-icon"></i>
+                            <span class="example-text">Sistema recibe Monto 6000 y Tipo "Sueldo" → Evalúa ambos → Devuelve "Necesita autorización"</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="interface-card comparator-card">
+                    <div class="card-header">COMPARATOR</div>
+                    <div class="card-content">
+                        <div class="io-section">
+                            <div class="io-label">Recibe:</div>
+                            <div class="io-value">Dos objetos del mismo tipo</div>
+                        </div>
+                        <div class="io-section">
+                            <div class="io-label">Devuelve:</div>
+                            <div class="io-value">Número entero (negativo, cero o positivo)</div>
+                        </div>
+                        <div class="example-section">
+                            <i class="fas fa-balance-scale example-icon"></i>
+                            <span class="example-text">Sistema recibe Cliente A y Cliente B → Compara saldos → Devuelve -1 (A tiene menos saldo)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>Ejemplo de aplicación en código</h2>
+            
+            <div class="code-example">
+                <pre>
+<span class="code-comment">// Uso encadenado de interfaces funcionales</span>
+clientesValidos.stream()
+    <span class="code-keyword">// Predicate</span>
+    .filter(cliente -> cliente.getSaldo() > 5000)
+    
+    <span class="code-keyword">// Function</span>
+    .map(cliente -> {
+        <span class="code-comment">// Supplier</span>
+        String codigo = generarCodigo.get();
+        
+        <span class="code-comment">// BiFunction</span>
+        double comision = calcularComision.apply(cliente.getSaldo());
+        
+        return "Cliente: " + cliente.getNombre() + 
+               " | Código: " + codigo +
+               " | Comisión: S/." + comision;
+    })
+    <span class="code-keyword">// Consumer</span>
+    .forEach(System.out::println);
+                </pre>
+            </div>
+            
+        </div>
+    </div>
+    
+    <footer>
+        © 2025 WorldReactive. Todos los derechos reservados.
+    </footer>
+</body>
+</html>
