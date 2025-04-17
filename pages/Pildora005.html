@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pildora Informativa: Tipos de Reactividad</title>
+    <link rel="stylesheet" href="pildora05.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="nav-header">
+    <div class="logo">
+        <span class="world">WORLD</span><span class="reactive">REACTIVE</span>
+    </div>
+    <a href="../index.html" class="back-button" title="Volver a la página principal"><i class="fas fa-chevron-left"></i></a>
+</div>
+    <div class="pildora">
+        <h1 class="pildora-title">Tipos de Reactividad</h1>
+        <div class="pildora-subtitle">Construyendo servicios reactivos</div>
+        <div class="pildora-content">
+            <p>Para construir servicios reactivos, disponemos de varias librerias potentes:</p>
+            
+            <div class="lib-section">
+                <h2><i class="fas fa-bolt"></i> RxJava</h2>
+                <p>La implementacion Java de ReactiveX, ofrece tipos para diferentes escenarios:</p>
+                <div class="types-grid">
+                    <div class="type-card">
+                        <h3>Maybe</h3>
+                        <p>Emite un solo valor, o ninguno, o un error.</p>
+                        <pre>Maybe.just("dato").subscribe(System.out::println);</pre>
+                    </div>
+                    <div class="type-card">
+                        <h3>Single</h3>
+                        <p>Emite exactamente un valor o un error.</p>
+                        <pre>Single.just("dato").subscribe(System.out::println);</pre>
+                    </div>
+                    <div class="type-card">
+                        <h3>Flowable</h3>
+                        <p>Secuencia de elementos con backpressure.</p>
+                        <pre>Flowable.range(1, 5).subscribe(System.out::println);</pre>
+                    </div>
+                    <div class="type-card">
+                        <h3>Completable</h3>
+                        <p>Completado o error, sin valor devuelto.</p>
+                        <pre>Completable.complete().subscribe(() -> System.out.println("Completado"));</pre>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lib-section">
+                <h2><i class="fas fa-atom"></i> Project Reactor</h2>
+                <p>Libreria reactiva base de Spring WebFlux, con dos tipos principales:</p>
+                <div class="types-grid">
+                    <div class="type-card">
+                        <h3>Mono</h3>
+                        <p>Emite 0 o 1 elemento, similar a Maybe/Single.</p>
+                        <pre>Mono.just("dato").subscribe(System.out::println);</pre>
+                    </div>
+                    <div class="type-card">
+                        <h3>Flux</h3>
+                        <p>Secuencia de 0 a N elementos, similar a Flowable.</p>
+                        <pre>Flux.range(1, 5).subscribe(System.out::println);</pre>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lib-section">
+                <h2><i class="fas fa-cloud"></i> Spring WebFlux</h2>
+                <p>Framework web reactivo de Spring, construido sobre Project Reactor:</p>
+                <pre>
+@RestController
+public class UsuarioController {
+    @GetMapping("/usuarios")
+    public Flux&lt;Usuario&gt; todos() {
+        return usuarioService.buscarTodos();
+    }
+    
+    @GetMapping("/usuarios/{id}")
+    public Mono&lt;Usuario&gt; buscarPorId(@PathVariable Long id) {
+        return usuarioService.buscarPorId(id);
+    }
+}
+                </pre>
+            </div>
+            
+            <div class="conclusion-box">
+                <h3>Esencia</h3>
+                <p>Selecciona la herramienta adecuada para tu contexto. RxJava tiene mas tipos especializados, Reactor es mas simple y se integra perfectamente con Spring.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        © 2025 WorldReactive. Todos los derechos reservados.
+    </footer>
+</body>
+</html>

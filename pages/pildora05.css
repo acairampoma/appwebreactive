@@ -1,0 +1,274 @@
+:root {
+    /* Colores */
+    --color-primary: #9c27b0; /* Violeta/Fucsia */
+    --color-secondary: #ffeb3b; /* Amarillo */
+    --color-accent: #00bcd4; /* Cyan */
+    --color-background: #121212; /* Fondo oscuro principal */
+    --color-surface: #1e1e1e; /* Superficies sobre el fondo */
+    --color-card-bg: #2a2a2a; /* Fondo para tarjetas o secciones */
+    --color-dark-light: #333333; /* Un gris un poco más claro */
+
+    --color-text-primary: #e0e0e0; /* Texto principal sobre fondo oscuro */
+    --color-text-secondary: #b0b0b0; /* Texto secundario o menos importante */
+    --color-text-on-primary: #ffffff; /* Texto sobre color primario */
+    --color-text-on-secondary: #000000; /* Texto sobre color secundario */
+
+    /* Fuentes */
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary: 'Montserrat', sans-serif; /* Para títulos o logos */
+
+    /* Espaciado */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 5rem;
+    
+    /* Border Radius */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 16px;
+    
+    /* Animation */
+    --transition-speed: 0.3s;
+}
+
+/* CSS for Pildora005: Tipos de Reactividad */
+
+.nav-header {
+    background-color: #0a0a0a;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #333;
+}
+.logo {
+    font-family: var(--font-secondary);
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    background: linear-gradient(90deg, #fff 30%, #9c27b0 60%, #00bcd4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.nav-header .logo span {
+    color: var(--color-accent);
+    font-weight: 700;
+}
+
+.nav-header .back-button {
+    background: linear-gradient(90deg, #9c27b0 0%, #00bcd4 100%);
+    color: #fff;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.5em;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: background 0.3s;
+    border: none;
+    outline: none;
+}
+
+.nav-header .back-button:hover {
+    background: linear-gradient(90deg, #00bcd4 0%, #9c27b0 100%);
+    color: #fff;
+}
+
+body { 
+    font-family: var(--font-primary), Arial, sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    background-color: var(--color-background) !important; 
+    color: var(--color-text-primary); 
+}
+.nav-header {
+    background-color: #0a0a0a;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #333;
+}
+.logo {
+    font-family: var(--font-secondary);
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+.world {
+    color: white;
+}
+.reactive {
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-left: 4px;
+}
+.back-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+}
+.back-button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.5s ease;
+}
+.back-button:hover {
+    transform: scale(1.1) rotate(-5deg);
+    box-shadow: 0 5px 15px rgba(156, 39, 176, 0.4);
+}
+.back-button:hover:before {
+    transform: scale(1.5);
+    opacity: 0;
+}
+.back-button i {
+    position: relative;
+    z-index: 2;
+}
+
+.logo { 
+    font-family: var(--font-secondary);
+    font-size: 1.5em; 
+    font-weight: bold; 
+}
+.world { 
+    color: var(--color-text-primary);
+}
+.reactive { 
+    color: var(--color-accent);
+}
+.back-button { 
+    margin-left: auto; 
+    color: var(--color-text-secondary);
+    text-decoration: none; 
+    font-size: 1.2em; 
+    transition: color var(--transition-speed);
+}
+.back-button:hover {
+    color: var(--color-primary);
+}
+.pildora { 
+    max-width: 900px; 
+    margin: var(--spacing-md) auto;
+    background-color: var(--color-card-bg); 
+    padding: var(--spacing-md); 
+    border-radius: var(--border-radius-md); 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3); 
+}
+.pildora-title { 
+    font-family: var(--font-secondary);
+    font-size: 2em; 
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-primary);
+}
+.pildora-subtitle { 
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.2em; 
+}
+
+/* Nuevos estilos para tipos de reactividad */
+.lib-section { 
+    margin-bottom: var(--spacing-lg); /* Usando variable */
+    border: 1px solid var(--color-dark-light); /* Usando variable */
+    padding: var(--spacing-md); /* Usando variable */
+    border-radius: var(--border-radius-sm); /* Usando variable */
+    background-color: var(--color-surface); /* Fondo ligero */
+}
+.lib-section h2 { 
+    color: var(--color-primary); /* Usando variable */
+    border-bottom: 2px solid var(--color-dark-light); /* Usando variable */
+    padding-bottom: var(--spacing-xs); /* Usando variable */
+    margin-top: 0; 
+    font-family: var(--font-secondary);
+}
+.lib-section h2 i { 
+    margin-right: var(--spacing-xs); /* Usando variable */
+    color: var(--color-accent); /* Usando variable */
+}
+
+.types-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    gap: var(--spacing-md); /* Usando variable */
+    margin-top: var(--spacing-md); /* Usando variable */
+}
+
+.type-card { 
+    background: var(--color-card-bg); /* Usando variable */
+    border-left: 3px solid var(--color-accent); /* Usando variable */
+    padding: var(--spacing-sm); /* Usando variable */
+    border-radius: var(--border-radius-sm); /* Usando variable */
+}
+.type-card h3 { 
+    margin-top: 0; 
+    color: var(--color-accent); /* Usando variable */
+    font-family: var(--font-secondary);
+    font-size: 1.1em;
+}
+.type-card p { 
+    font-size: 0.9em; 
+    color: var(--color-text-secondary);
+}
+.type-card pre, .lib-section pre { 
+    background: var(--color-background); /* Fondo más oscuro para código */
+    color: var(--color-text-primary);
+    padding: var(--spacing-sm); /* Usando variable */
+    border-radius: var(--border-radius-sm); /* Usando variable */
+    font-size: 0.85em; 
+    overflow-x: auto; 
+    border: 1px solid var(--color-dark-light);
+    margin-top: var(--spacing-sm);
+}
+
+.conclusion-box { 
+    background: var(--color-surface); /* Usando variable */
+    padding: var(--spacing-md); /* Usando variable */
+    border-left: 4px solid var(--color-primary); /* Usando variable primaria */
+    margin-top: var(--spacing-lg); /* Usando variable */
+    border-radius: var(--border-radius-sm);
+}
+.conclusion-box h3 { 
+    margin-top: 0; 
+    color: var(--color-primary); /* Usando variable primaria */
+    font-family: var(--font-secondary);
+}
+footer { 
+    text-align: center; 
+    padding: var(--spacing-md); /* Usando variable */
+    color: var(--color-text-secondary); 
+    background: var(--color-dark-light); 
+    margin-top: var(--spacing-lg); 
+}

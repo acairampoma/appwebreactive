@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pildora Informativa: R2DBC</title>
+    <link rel="stylesheet" href="pildora06.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="nav-header">
+    <div class="logo">
+        <span class="world">WORLD</span><span class="reactive">REACTIVE</span>
+    </div>
+    <a href="../index.html" class="back-button" title="Volver a la página principal"><i class="fas fa-chevron-left"></i></a>
+</div>
+    <div class="pildora">
+        <h1 class="pildora-title">R2DBC</h1>
+        <div class="pildora-subtitle">Acceso reactivo a BD relacionales</div>
+        <div class="pildora-content">
+            <p>R2DBC es una especificacion que permite interactuar con BD relacionales usando un modelo reactivo y no bloqueante.</p>
+            <ul>
+                <li>No bloquea hilos al ejecutar consultas.</li>
+                <li>Escala mejor en escenarios de alta concurrencia.</li>
+                <li>Se integra con librerias reactivas como Project Reactor.</li>
+            </ul>
+            <div class="example-section">
+                <h3>Ejemplo: Consulta reactiva</h3>
+                <pre>
+Mono<Usuario> usuarioMono = DatabaseClient.create(connectionFactory)
+    .sql("SELECT * FROM usuarios WHERE id = :id")
+    .bind("id", 1)
+    .map(row -> new Usuario(row.get("id", Integer.class), row.get("nombre", String.class)))
+    .one();
+                </pre>
+            </div>
+            <div class="conclusion-box">
+                <h3>Esencia</h3>
+                <p>Usar R2DBC te ayuda a construir aplicaciones reactivas end-to-end, desde la BD hasta la UI.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        © 2025 WorldReactive. Todos los derechos reservados.
+    </footer>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pildora Informativa: Manejo de Errores</title>
+    <link rel="stylesheet" href="pildora07.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="nav-header">
+    <div class="logo">
+        <span class="world">WORLD</span><span class="reactive">REACTIVE</span>
+    </div>
+    <a href="../index.html" class="back-button" title="Volver a la página principal"><i class="fas fa-chevron-left"></i></a>
+</div>
+    <div class="pildora">
+        <h1 class="pildora-title">Manejo de Errores</h1>
+        <div class="pildora-subtitle">Tolerancia y recuperacion de fallos</div>
+        <div class="pildora-content">
+            <p>En sistemas reactivos, el manejo de errores es fundamental para mantener el flujo sin interrupciones.</p>
+            <ul>
+                <li><strong>onErrorResume:</strong> Permite reemplazar una secuencia con valores alternativos cuando ocurre un error.</li>
+                <li><strong>onErrorReturn:</strong> Devuelve un valor por defecto al ocurrir un error.</li>
+                <li><strong>retry:</strong> Reintenta la operacion un numero de veces configurado.</li>
+                <li><strong>retryWhen:</strong> Define una estrategia personalizada de reintentos.</li>
+            </ul>
+            <div class="example-section">
+                <h3>Ejemplo: Recuperacion de error</h3>
+                <pre>
+Flux<String> data = Flux.just("1", "a", "3")
+    .map(Integer::parseInt)
+    .onErrorResume(e -> Flux.just(0));
+</pre>
+            </div>
+            <div class="conclusion-box">
+                <h3>Esencia</h3>
+                <p>Un sistema reactivo debe anticipar y gestionar errores para seguir operando sin bloqueos.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        © 2025 WorldReactive. Todos los derechos reservados.
+    </footer>
+</body>
+</html>
