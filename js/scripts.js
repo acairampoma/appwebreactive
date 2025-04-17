@@ -1,42 +1,44 @@
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("DOM fully loaded");
+    // Función para inicializar las pestañas (asegurando que solo Junior esté activo)
+    function initializeTabs() {
+        const allTabs = document.querySelectorAll('.level-tab');
+        const allContents = document.querySelectorAll('.level-content');
+        
+        // Desactivar todas las pestañas primero
+        allTabs.forEach(tab => tab.classList.remove('active'));
+        allContents.forEach(content => content.classList.remove('active'));
+        
+        // Activar solo la pestaña Junior y su contenido
+        const juniorTab = document.querySelector('.level-tab[data-level="junior"]');
+        const juniorContent = document.getElementById('junior-content');
+        
+        if (juniorTab) juniorTab.classList.add('active');
+        if (juniorContent) juniorContent.classList.add('active');
+    }
+    
+    // Inicializar las pestañas inmediatamente
+    initializeTabs();
     
     // Obtener elementos del DOM
     const hamburger = document.getElementById('hamburger');
     const menu = document.getElementById('menu');
     const backdrop = document.getElementById('mobile-menu-backdrop');
-    
-
-    // Elementos de las pestañas
     const levelTabs = document.querySelectorAll('.level-tab');
     const levelContents = document.querySelectorAll('.level-content');
     
-    console.log("Hamburger element:", hamburger);
-    console.log("Menu element:", menu);
-    console.log("Backdrop element:", backdrop);
-    
     // Verificar que los elementos existan antes de agregar los eventos
-    if (!hamburger || !menu || !backdrop) {
-        console.error("One or more elements not found!");
-        return;
-    }
+    if (!hamburger || !menu || !backdrop) return;
     
     // Manejar el clic en el botón hamburguesa
     hamburger.addEventListener('click', function(e) {
-        console.log("Hamburger clicked!");
         e.preventDefault();
-        
         hamburger.classList.toggle('active');
         menu.classList.toggle('active');
         backdrop.classList.toggle('active');
-        
-        console.log("Menu active:", menu.classList.contains('active'));
     });
     
     // Manejar el clic en el backdrop
     backdrop.addEventListener('click', function() {
-        console.log("Backdrop clicked!");
-        
         hamburger.classList.remove('active');
         menu.classList.remove('active');
         backdrop.classList.remove('active');
@@ -46,24 +48,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuLinks = document.querySelectorAll('#menu a');
     menuLinks.forEach(link => {
         link.addEventListener('click', function() {
-            console.log("Menu link clicked!");
-            
             hamburger.classList.remove('active');
             menu.classList.remove('active');
             backdrop.classList.remove('active');
         });
     });
 
-
     // Event listeners para las pestañas
     levelTabs.forEach(tab => {
         tab.addEventListener('click', () => {
             const level = tab.getAttribute('data-level');
-            
-            // Actualizar pestañas activas
+
+            // Asegurarse de que solo una pestaña quede activa
             levelTabs.forEach(t => t.classList.remove('active'));
             tab.classList.add('active');
-            
+
             // Actualizar contenido activo
             levelContents.forEach(content => {
                 content.classList.remove('active');
@@ -71,8 +70,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     content.classList.add('active');
                 }
             });
+
+            // Asegurarse de que la pestaña de píldoras solo se active cuando se hace clic en ella
+            if (level !== 'pills') {
+                const pillsTab = document.querySelector('.level-tab[data-level="pills"]');
+                if (pillsTab) pillsTab.classList.remove('active');
+            }
         });
     });
-    
-
 });
