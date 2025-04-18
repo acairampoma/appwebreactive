@@ -260,26 +260,44 @@ body {
     margin-bottom: 5px;
 }
 .reference-position {
-    color: var(--color-secondary-light);
-    font-size: 13px;
+color: var(--color-secondary-light);
+font-size: 13px;
 }
 .awards-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    margin-top: 10px;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 15px;
+margin-top: 10px;
 }
 .award-item {
-    padding: 15px;
-    background: linear-gradient(135deg, rgba(156, 39, 176, 0.05) 0%, rgba(33, 150, 243, 0.05) 100%);
-    border-radius: 5px;
-    border-left: 3px solid var(--color-primary);
-    transition: all 0.3s ease;
+padding: 15px;
+background: linear-gradient(135deg, rgba(156, 39, 176, 0.05) 0%, rgba(33, 150, 243, 0.05) 100%);
+border-radius: 5px;
+border-left: 3px solid var(--color-primary);
+transition: all 0.3s ease;
 }
 .award-item:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     background: linear-gradient(135deg, rgba(156, 39, 176, 0.1) 0%, rgba(33, 150, 243, 0.1) 100%);
+}
+.galactic-star {
+    color: #FFD700;
+    font-size: 1em;
+    margin-right: 4px;
+    padding: 1.5px 3px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255,215,0,0.12), rgba(255,255,200,0.07));
+    box-shadow: 0 0 4px 1px #ffe066, 0 0 6px 1.5px #ffd700;
+    border: 1px solid #ffe066;
+    outline: none;
+    vertical-align: middle;
+    display: inline-block;
+    transition: box-shadow 0.3s, border 0.3s;
+}
+.galactic-star:hover {
+    box-shadow: 0 0 10px 2px #ffe066, 0 0 16px 4px #ffd700;
+    border-color: #ffd700;
 }
 .job {
     margin-bottom: 25px;
