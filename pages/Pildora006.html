@@ -9,37 +9,100 @@
 </head>
 <body>
     <div class="nav-header">
-    <div class="logo">
-        <span class="world">WORLD</span><span class="reactive">REACTIVE</span>
+        <div class="logo">
+            <span class="world">WORLD</span><span class="reactive">REACTIVE</span>
+        </div>
+        <a href="../index.html" class="back-button" title="Volver a la página principal"><i class="fas fa-chevron-left"></i></a>
     </div>
-    <a href="../index.html" class="back-button" title="Volver a la página principal"><i class="fas fa-chevron-left"></i></a>
-</div>
+    
     <div class="pildora">
-        <h1 class="pildora-title">R2DBC</h1>
-        <div class="pildora-subtitle">Acceso reactivo a BD relacionales</div>
-        <div class="pildora-content">
-            <p>R2DBC es una especificacion que permite interactuar con BD relacionales usando un modelo reactivo y no bloqueante.</p>
-            <ul>
-                <li>No bloquea hilos al ejecutar consultas.</li>
-                <li>Escala mejor en escenarios de alta concurrencia.</li>
-                <li>Se integra con librerias reactivas como Project Reactor.</li>
-            </ul>
-            <div class="example-section">
-                <h3>Ejemplo: Consulta reactiva</h3>
-                <pre>
-Mono<Usuario> usuarioMono = DatabaseClient.create(connectionFactory)
-    .sql("SELECT * FROM usuarios WHERE id = :id")
-    .bind("id", 1)
-    .map(row -> new Usuario(row.get("id", Integer.class), row.get("nombre", String.class)))
-    .one();
-                </pre>
-            </div>
-            <div class="conclusion-box">
-                <h3>Esencia</h3>
-                <p>Usar R2DBC te ayuda a construir aplicaciones reactivas end-to-end, desde la BD hasta la UI.</p>
+        <h1 class="pildora-title">R2<span class="r2dbc-reactive">DBC</span></h1>
+        <div class="pildora-subtitle">Acceso reactivo a bases de datos relacionales: rompiendo la barrera bloqueante</div>
+
+<div class="pildora-content">
+    <!-- Super R2DBC al rescate -->
+    <div class="section-title">Super R2DBC al rescate</div>
+    <div class="card-row">
+        <div class="card-col">
+            <div class="section-content">
+                <p><span class="story-bullet"><i class="fas fa-bolt"></i></span> Era un día normal en la empresa. Nuestros servidores iban lentos, los tiempos de respuesta aumentaban y los usuarios se quejaban. La aplicación reactiva funcionaba perfectamente en la capa web, pero en cuanto tocaba la base de datos... ¡todo se bloqueaba!</p>
+                <p><span class="story-bullet"><i class="fas fa-question-circle"></i></span> —¿Y ahora quién podrá ayudarnos? —dijo el equipo desesperado.</p>
+                <p><span class="story-bullet"><i class="fas fa-sun"></i></span> De repente, apareció una figura brillante en el horizonte del código...</p>
+                <p><span class="story-bullet"><i class="fas fa-user-astronaut"></i></span> —¡Yo! ¡Super R2DBC! —exclamó el héroe de las bases de datos reactivas.</p>
+                <p><span class="story-bullet"><i class="fas fa-rocket"></i></span> Con un simple cambio de configuración, nuestra aplicación pasó de ser parcialmente reactiva a serlo de extremo a extremo. Los tiempos de respuesta mejoraron, la capacidad de concurrencia se multiplicó por diez y los usuarios volvieron a sonreír. El día estaba salvado gracias a... ¡Super R2DBC!</p>
             </div>
         </div>
+        <div class="card-col">
+            <img src="../assets/r2dbchero.jpg" alt="Super R2DBC Hero" class="section-img" />
+        </div>
     </div>
+
+    <!-- ¿Quién está detrás de R2DBC? -->
+    <div class="section-title">¿Quién está detrás de R2DBC?</div>
+    <div class="section-content">
+        <p>R2DBC nació en 2018, impulsado por ingenieros de Pivotal (VMware), para unir el mundo reactivo y las bases de datos relacionales. Así se creó el puente entre dos paradigmas hasta entonces incompatibles.</p>
+    </div>
+
+    <!-- ¿Cómo configuro R2DBC? -->
+    <div class="section-title">¿Cómo configuro R2DBC?</div>
+    <div class="section-content">
+        <pre class="config-block">spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/miapp
+    username: usuario
+    password: secreto</pre>
+    </div>
+
+    <!-- ¿Cómo lo uso? -->
+    <div class="section-title">¿Cómo lo uso?</div>
+    <div class="section-content">
+        <pre class="config-block">Mono&lt;Usuario&gt; usuarioMono = DatabaseClient.create(connectionFactory)
+    .sql("SELECT * FROM usuarios WHERE id = :id")
+    .bind("id", 1)
+    .map(row -&gt; new Usuario(row.get("id", Integer.class), row.get("nombre", String.class)))
+    .one();</pre>
+    </div>
+
+    <!-- Bases de datos compatibles -->
+    <div class="section-title">Bases de datos compatibles</div>
+    <div class="section-content">
+        <ul class="story-bullets-list">
+            <li><span class="story-bullet"><i class="fas fa-database"></i></span> PostgreSQL</li>
+            <li><span class="story-bullet"><i class="fas fa-fish"></i></span> MySQL/MariaDB</li>
+            <li><span class="story-bullet"><i class="fas fa-server"></i></span> Microsoft SQL Server</li>
+            <li><span class="story-bullet"><i class="fas fa-flask"></i></span> H2</li>
+            <li><span class="story-bullet"><i class="fas fa-archway"></i></span> Oracle</li>
+        </ul>
+    </div>
+
+    <!-- ¿Dónde brilla más? -->
+    <div class="section-title">¿Dónde brilla más?</div>
+    <div class="section-content">
+        <ul class="story-bullets-list">
+            <li><span class="story-bullet"><i class="fas fa-bolt"></i></span> Black Friday: miles de peticiones por segundo.</li>
+            <li><span class="story-bullet"><i class="fas fa-cubes"></i></span> Microservicios con Spring WebFlux.</li>
+            <li><span class="story-bullet"><i class="fas fa-signal"></i></span> Tiempo real: IoT, cotizaciones, sensores.</li>
+            <li><span class="story-bullet"><i class="fas fa-cloud"></i></span> En la nube: eficiencia y ahorro.</li>
+            <li><span class="story-bullet"><i class="fas fa-users"></i></span> Equipos pequeños con grandes retos.</li>
+        </ul>
+    </div>
+
+    <!-- Nota final -->
+    <div class="section-title">Nota final</div>
+    <div class="final-note">
+        <div>No necesitas cambiar a NoSQL. Yo, R2DBC, estoy aquí para ayudarte.</div>
+        <img src="../assets/r2dbcok.jpg" alt="R2DBC Ok" class="final-note-img" />
+    </div>
+</div>
+
+            
+
+            
+
+
+        </div>
+    </div>
+    
     <footer>
         © 2025 WorldReactive. Todos los derechos reservados.
     </footer>

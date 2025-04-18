@@ -1,39 +1,4 @@
-:root {
-    /* Colores */
-    --color-primary: #9c27b0; /* Violeta/Fucsia */
-    --color-secondary: #ffeb3b; /* Amarillo */
-    --color-accent: #00bcd4; /* Cyan */
-    --color-background: #121212; /* Fondo oscuro principal */
-    --color-surface: #1e1e1e; /* Superficies sobre el fondo */
-    --color-card-bg: #2a2a2a; /* Fondo para tarjetas o secciones */
-    --color-dark-light: #333333; /* Un gris un poco más claro */
-
-    --color-text-primary: #e0e0e0; /* Texto principal sobre fondo oscuro */
-    --color-text-secondary: #b0b0b0; /* Texto secundario o menos importante */
-    --color-text-on-primary: #ffffff; /* Texto sobre color primario */
-    --color-text-on-secondary: #000000; /* Texto sobre color secundario */
-
-    /* Fuentes */
-    --font-primary: 'Roboto', sans-serif;
-    --font-secondary: 'Montserrat', sans-serif; /* Para títulos o logos */
-
-    /* Espaciado */
-    --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 2rem;
-    --spacing-lg: 3rem;
-    --spacing-xl: 5rem;
-    
-    /* Border Radius */
-    --border-radius-sm: 4px;
-    --border-radius-md: 8px;
-    --border-radius-lg: 16px;
-    
-    /* Animation */
-    --transition-speed: 0.3s;
-}
-
-/* CSS for Pildora005: Tipos de Reactividad */
+/* ================= HEADER STYLES (idéntico a pildora04.css) ================= */
 
 .nav-header {
     background-color: #0a0a0a;
@@ -43,78 +8,26 @@
     justify-content: space-between;
     border-bottom: 1px solid #333;
 }
-.logo {
-    font-family: var(--font-secondary);
-    font-size: 24px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    background: linear-gradient(90deg, #fff 30%, #9c27b0 60%, #00bcd4 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
 
-.nav-header .logo span {
-    color: var(--color-accent);
-    font-weight: 700;
-}
-
-.nav-header .back-button {
-    background: linear-gradient(90deg, #9c27b0 0%, #00bcd4 100%);
-    color: #fff;
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-size: 1.5em;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: background 0.3s;
-    border: none;
-    outline: none;
-}
-
-.nav-header .back-button:hover {
-    background: linear-gradient(90deg, #00bcd4 0%, #9c27b0 100%);
-    color: #fff;
-}
-
-body { 
-    font-family: var(--font-primary), Arial, sans-serif; 
-    margin: 0; 
-    padding: 0; 
-    background-color: var(--color-background) !important; 
-    color: var(--color-text-primary); 
-}
-.nav-header {
-    background-color: #0a0a0a;
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #333;
-}
 .logo {
     font-family: var(--font-secondary);
     font-size: 24px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    display: flex;
-    align-items: center;
 }
+
 .world {
     color: white;
 }
+
 .reactive {
     background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    margin-left: 4px;
 }
+
 .back-button {
     display: flex;
     align-items: center;
@@ -133,6 +46,7 @@ body {
     position: relative;
     overflow: hidden;
 }
+
 .back-button:before {
     content: "";
     position: absolute;
@@ -145,46 +59,170 @@ body {
     transform: scale(0);
     transition: transform 0.5s ease;
 }
+
 .back-button:hover {
     transform: scale(1.1) rotate(-5deg);
     box-shadow: 0 5px 15px rgba(156, 39, 176, 0.4);
 }
+
 .back-button:hover:before {
     transform: scale(1.5);
     opacity: 0;
 }
+
 .back-button i {
     position: relative;
     z-index: 2;
 }
 
-.logo { 
-    font-family: var(--font-secondary);
-    font-size: 1.5em; 
-    font-weight: bold; 
-}
-.world { 
+/* ================= CONTENIDO DE LA PÍLDORA ================= */
+
+body {
+    font-family: var(--font-primary), Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background) !important;
     color: var(--color-text-primary);
 }
-.reactive { 
-    color: var(--color-accent);
+
+.pildora {
+    max-width: 900px;
+    margin: var(--spacing-md) auto;
+    background-color: var(--color-card-bg);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
-.back-button { 
-    margin-left: auto; 
-    color: var(--color-text-secondary);
-    text-decoration: none; 
-    font-size: 1.2em; 
-    transition: color var(--transition-speed);
-}
-.back-button:hover {
+
+.pildora-title {
+    font-family: var(--font-secondary);
+    font-size: 2em;
+    margin-bottom: var(--spacing-sm);
     color: var(--color-primary);
 }
-.pildora { 
-    max-width: 900px; 
-    margin: var(--spacing-md) auto;
-    background-color: var(--color-card-bg); 
-    padding: var(--spacing-md); 
-    border-radius: var(--border-radius-md); 
+
+.pildora-subtitle {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.2em;
+}
+
+.lib-section {
+    margin-bottom: var(--spacing-lg);
+    border: 1px solid var(--color-dark-light);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-sm);
+    background-color: var(--color-surface);
+}
+
+.lib-section h2 {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-dark-light);
+    padding-bottom: var(--spacing-xs);
+    margin-top: 0;
+    font-family: var(--font-secondary);
+}
+
+.lib-section h2 i {
+    margin-right: var(--spacing-xs);
+    color: var(--color-accent);
+}
+
+.types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.type-card {
+    background: var(--color-card-bg);
+    border-left: 3px solid var(--color-accent);
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+}
+
+.type-card h3 {
+    margin-top: 0;
+    color: var(--color-accent);
+    font-family: var(--font-secondary);
+    font-size: 1.1em;
+}
+
+.type-card p {
+    font-size: 0.9em;
+    color: var(--color-text-secondary);
+}
+
+.type-card pre, .lib-section pre {
+    background: var(--color-background);
+    color: var(--color-text-primary);
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    font-size: 0.85em;
+    overflow-x: auto;
+    border: 1px solid var(--color-dark-light);
+    margin-top: var(--spacing-sm);
+}
+
+.conclusion-box {
+    background: var(--color-surface);
+    padding: var(--spacing-md);
+    border-left: 4px solid var(--color-primary);
+    margin-top: var(--spacing-lg);
+    border-radius: var(--border-radius-sm);
+}
+
+.conclusion-box h3 {
+    margin-top: 0;
+    color: var(--color-primary);
+    font-family: var(--font-secondary);
+}
+
+footer {
+    text-align: center;
+    padding: var(--spacing-md);
+    color: var(--color-text-secondary);
+    background: var(--color-dark-light);
+    margin-top: var(--spacing-lg);
+}
+
+/* ================= VARIABLES :root ================= */
+
+:root {
+    /* Colores */
+    --color-primary: #9c27b0; /* Violeta/Fucsia */
+    --color-secondary: #2196f3; /* Azul Cyber */
+    --color-accent: #00bcd4; /* Cyan */
+    --color-background: #121212; /* Fondo oscuro principal */
+    --color-surface: #1e1e1e; /* Superficies sobre el fondo */
+    --color-card-bg: #2a2a2a; /* Fondo para tarjetas o secciones */
+    --color-dark-light: #333333; /* Un gris un poco más claro */
+
+    --color-text-primary: #e0e0e0; /* Texto principal sobre fondo oscuro */
+    --color-text-secondary: #b0b0b0; /* Texto secundario o menos importante */
+    --color-text-on-primary: #ffffff; /* Texto sobre color primario */
+    --color-text-on-secondary: #000000; /* Texto sobre color secundario */
+
+    /* Fuentes */
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary: 'Montserrat', sans-serif; /* Para títulos o logos (igual que en 004) */
+
+    /* Espaciado */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 5rem;
+    
+    /* Border Radius */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 16px;
+    
+    /* Animation */
+    --transition-speed: 0.3s;
+}
     box-shadow: 0 2px 5px rgba(0,0,0,0.3); 
 }
 .pildora-title { 
