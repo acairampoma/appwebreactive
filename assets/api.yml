@@ -1,0 +1,93 @@
+openapi: 3.0.0
+info:
+  title: Credit API
+  version: 1.0.0
+  description: API for managing bank credits
+servers:
+  - url: http://localhost:8080
+    description: Credit Service
+
+paths:
+  /credits:
+    post:
+      summary: "Apply for a new credit"
+      operationId: "applyForCredit"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Credit'
+      responses:
+        '201':
+          description: "Credit application received"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Credit'
+        '400':
+          description: Bad request
+  /credits/{id_cliente}:
+    post:
+      summary: "Retrieve all credits for a client"
+      operationId: getAllCreditsByClient
+      parameters:
+        - name: id_cliente
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: "Credit application received"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Credit'
+        '404':
+          description: Client not found
+
+  /credits/{creditsId}:
+    put:
+      summary: "Make a payment to a credit"
+      operationId: "makeCreditPayment"
+      parameters:
+        - name: creditsId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                amount:
+                  type: number
+      responses:
+        '200':
+          description: Payment made successfully
+        '400':
+          description: Bad request
+
+components:
+  schemas:
+    Credit:
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+          enum:
+            - personal
+            - empresarial
+        id_cliente:
+          type: string
+        amount:
+          type: number
+      required:
+        - id_cliente
+        - type
+        - amount

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WorldReactive - Generador de Arquetipos para Backends Biónicos. Genera backends reactivos personalizados.">
+    <title>Generador de Arquetipos | WorldReactive</title>
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Orbitron:wght@400;600;900&display=swap" rel="stylesheet">
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="../css/generador.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-text">WORLD<span class="reactive">REACTIVE</span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Form -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Generador de <span class="highlight">Arquetipos</span></h1>
+                <p class="hero-description">Selecciona un tipo de arquetipo, sube tu contrato OpenAPI, y descarga el ZIP personalizado listo para tu Backend Biónico.</p>
+                
+                <div class="instructions">
+                    <h3><i class="fas fa-book-open"></i> Instrucciones</h3>
+                    <ul class="instructions-list">
+                        <li>Selecciona el tipo de arquetipo que deseas generar.</li>
+                        <li>Sube tu contrato OpenAPI en formato YAML o JSON.</li>
+                        <li>Haz clic en "Generar Proyecto" y descarga tu ZIP personalizado listo para tu Backend Biónico.</li>
+                    </ul>
+                </div>
+                
+                <div class="arquetipo-form">
+                    <form id="arquetipoForm">
+                        <div class="form-group">
+                            <label for="arquetipoType"><span class="normal-text">TIPO DE</span> <span class="reactive">ARQUETIPO</span></label>
+                            <select id="arquetipoType" class="form-control" required onchange="checkFormReady();">
+    <option value="" disabled hidden>Selecciona un arquetipo</option>
+    <option value="rest">WorldReactive REST</option>
+    <option value="proxy">WorldReactive PROXY</option>
+</select>
+<div id="arquetipoTitulo" style="margin-bottom:1rem; font-weight:bold; color:#0074d9;"></div>
+                        </div>
+                        
+
+                        <div class="form-group">
+                            <label for="contractFile"><span class="normal-text">CONTRATO</span> <span class="reactive">OPENAPI</span> (YAML/JSON)</label>
+                            <div class="file-input">
+                                <label class="file-input-label">
+                                    <i class="fas fa-file-code"></i>
+                                    <span id="contractText">Selecciona tu contrato OpenAPI</span>
+                                    <input type="file" id="contractFile" accept=".yaml,.yml,.json" required oninput="checkFormReady();"/>
+                                </label>
+                            </div>
+                            <div class="file-name" id="contractFileName"></div>
+<div id="yamlNombre" style="margin-bottom:1rem; color:#555;"></div>
+                        </div>
+                        
+                        <button type="button" class="form-btn" onclick="generarProyecto()" disabled>
+                            <i class="fas fa-cogs"></i> Generar Proyecto
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">WORLD<span class="reactive">REACTIVE</span></span>
+                </div>
+                <div class="footer-tagline">
+                    <p>"Backend no solo se hace... se entiende, se vive, se domina."</p>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 WorldReactive. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/generador.js"></script>
+</body>
+</html>
