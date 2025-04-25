@@ -538,9 +538,49 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .credit-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+    .code-button {
+        width: 48%;
+        min-width: 120px;
+        max-width: 48%;
+        font-size: 1.15rem;
+        padding: 0.7rem 0.5rem;
+        margin: 0;
+        box-sizing: border-box;
+        margin-bottom: 0.3rem;
+    }
+    .code-button .concept-name {
+        font-size: 1.25rem;
+    }
+    .code-examples {
+        min-width: 0;
+        width: 100%;
+        overflow-x: auto;
+    }
+    .code-panel pre {
+        padding: 0.5rem 0.7rem;
+        font-size: 0.98rem;
+        margin-bottom: 0.7rem;
+        max-width: 100vw;
+        overflow-x: auto;
+        box-sizing: border-box;
+    }
+
     .escena-row, .escena-row.reverse {
         flex-direction: column;
         gap: var(--spacing-md);
+    }
+    .escena {
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     .escena-img-placeholder {
