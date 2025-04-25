@@ -1,124 +1,61 @@
-/* CSS for Pildora004: Programacion Reactiva en tu Bolsillo */
-
-.nav-header {
-    background-color: #0a0a0a;
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #333;
-}
-
-.logo {
-    font-family: var(--font-secondary);
-    font-size: 24px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.world {
-    color: white;
-}
-
-.reactive {
-    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-.back-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-    color: white;
-    border-radius: 50%;
-    text-decoration: none;
-    font-size: 16px;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    position: relative;
-    overflow: hidden;
-}
-
-.back-button:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    transform: scale(0);
-    transition: transform 0.5s ease;
-}
-
-.back-button:hover {
-    transform: scale(1.1) rotate(-5deg);
-    box-shadow: 0 5px 15px rgba(156, 39, 176, 0.4);
-}
-
-.back-button:hover:before {
-    transform: scale(1.5);
-    opacity: 0;
-}
-
-.back-button i {
-    position: relative;
-    z-index: 2;
-}
-
-
 :root {
-    /* Colores */
-    --color-primary: #9c27b0; /* Violeta/Fucsia */
-    --color-secondary: #2196f3; /* Azul Cyber */
+    /* Color Palette */
+    --color-primary: #9c27b0; /* Violeta/Fucsia - Energía Reactiva */
+    --color-primary-light: #d05ce3;
+    --color-primary-dark: #6a0080;
+    --color-secondary: #2196f3; /* Azul Cyber - Tecnología */
+    --color-secondary-light: #6ec6ff;
+    --color-secondary-dark: #0069c0;
+    --color-dark: #121212; /* Negro Elegante - Fondo */
+    --color-dark-light: #1e1e1e;
+    --color-success: #4caf50; /* Verde Luz - Confirmaciones */
+    --color-text-secondary: #e0e0e0; /* Blanco Opaco - Textos secundarios */
+    --color-text-primary: #ffffff;
+    --color-background: #0a0a0a;
+    --color-card-bg: #1a1a1a;
+    --color-border: #333333;
     --color-accent: #00bcd4; /* Cyan */
-    --color-background: #121212; /* Fondo oscuro principal */
     --color-surface: #1e1e1e; /* Superficies sobre el fondo */
-    --color-card-bg: #2a2a2a; /* Fondo para tarjetas o secciones */
-    --color-dark-light: #333333; /* Un gris un poco más claro */
-
-    --color-text-primary: #e0e0e0; /* Texto principal sobre fondo oscuro */
-    --color-text-secondary: #b0b0b0; /* Texto secundario o menos importante */
-    --color-text-on-primary: #ffffff; /* Texto sobre color primario */
-    --color-text-on-secondary: #000000; /* Texto sobre color secundario */
-
-    /* Fuentes */
+    /* Typography */
     --font-primary: 'Roboto', sans-serif;
-    --font-secondary: 'Montserrat', sans-serif; /* Para títulos o logos */
-
-    /* Espaciado */
+    --font-secondary: 'Orbitron', sans-serif;
+    /* Spacing */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 2rem;
     --spacing-lg: 3rem;
     --spacing-xl: 5rem;
-    
     /* Border Radius */
     --border-radius-sm: 4px;
     --border-radius-md: 8px;
     --border-radius-lg: 16px;
-    
     /* Animation */
     --transition-speed: 0.3s;
 }
 
-body { 
-    font-family: var(--font-primary), Arial, sans-serif; 
-    margin: 0; 
-    padding: 0; 
-    background-color: var(--color-background) !important; 
-    color: var(--color-text-primary); 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-/* Header al estilo WorldReactive */
+
+html {
+    font-size: 62.5%; /* 10px = 1rem base */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
 .nav-header {
     background-color: #0a0a0a;
     padding: 15px 20px;
@@ -126,18 +63,23 @@ body {
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
 }
 
 .logo {
     font-family: var(--font-secondary);
-    font-size: 24px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-size: 2.4rem;
+    font-weight: 900;
+    letter-spacing: 2px;
 }
 
 .world {
-    color: white;
+    color: var(--color-text-primary);
 }
 
 .reactive {
@@ -194,102 +136,463 @@ body {
     z-index: 2;
 }
 
-.logo { 
-    font-family: var(--font-secondary); /* Usando variable */
-    font-size: 1.5em; 
-    font-weight: bold; 
-}
-.world { 
-    color: var(--color-text-primary); /* Ajustado */
+/* Container y Pilldora */
+.pildora {
+    max-width: 800px;
+    margin: 9rem auto 3rem;
+    background-color: var(--color-card-bg);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
 }
 
-.back-button { 
-    margin-left: auto; 
-    color: var(--color-text-secondary); /* Usando variable */
-    text-decoration: none; 
-    font-size: 1.2em; 
-    transition: color var(--transition-speed);
+.pildora::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 30%, rgba(156, 39, 176, 0.08), transparent 70%),
+                radial-gradient(circle at 30% 70%, rgba(33, 150, 243, 0.08), transparent 70%);
+    z-index: 0;
 }
-.back-button:hover {
-    color: var(--color-primary);
-}
-.pildora { 
-    max-width: 800px; 
-    margin: var(--spacing-md) auto; /* Usando variables */
-    background-color: var(--color-card-bg); 
-    padding: var(--spacing-md); 
-    border-radius: var(--border-radius-md); 
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3); 
-}
-.pildora-title { 
-    font-family: var(--font-secondary); /* Usando variable */
-    font-size: 2em; 
-    margin-bottom: var(--spacing-sm); /* Usando variable */
-    color: var(--color-primary); /* Usando variable */
-}
-.pildora-subtitle { 
-    color: var(--color-text-secondary); /* Usando variable */
-    margin-bottom: var(--spacing-md); /* Usando variable */
-    font-size: 1.2em; 
-}
-.pildora-content { 
-    line-height: 1.6; 
-    color: var(--color-text-primary); /* Asegurando color texto principal */
-}
-.whatsapp-list, .checks-list {
-    margin-left: var(--spacing-md);
-    margin-bottom: var(--spacing-md);
-    list-style: none;
-    padding-left: 0;
-}
-.whatsapp-list li {
+
+.pildora-title {
+    font-family: var(--font-secondary);
+    font-size: 3.6rem;
+    margin-bottom: var(--spacing-sm);
     position: relative;
-    padding-left: 2em;
-    margin-bottom: var(--spacing-xs);
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+    letter-spacing: 0.05em;
+    color: var(--color-text-primary);
 }
-.whatsapp-list li::before {
-    content: '\f232'; /* Unicode WhatsApp FontAwesome */
-    font-family: 'Font Awesome 5 Free', 'FontAwesome', Arial, sans-serif;
+
+.pildora-title .gradient-text {
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.pildora-subtitle {
+    font-family: var(--font-secondary);
+    font-size: 2rem;
+    color: var(--color-text-secondary);
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.pildora-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Escenas */
+.escena {
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    padding: var(--spacing-md);
+}
+
+.escena:last-child {
+    border-bottom: none;
+}
+
+.escena h2 {
+    font-family: var(--font-secondary);
+    font-size: 2.4rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text-primary);
+    letter-spacing: 0.05em;
+}
+
+.escena h2 .gradient-text {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.escena-row {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+}
+
+.escena-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.escena-text {
+    flex: 2;
+}
+
+.escena-img-placeholder {
+    flex: 1;
+    min-width: 200px;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    background: #232323;
+    /* Alto flexible para escritorio */
+    height: 220px;
+    max-height: 40vw;
+    aspect-ratio: 4 / 3; /* Mantiene relación 4:3 en navegadores modernos */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.escena-img-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.escena-img-placeholder::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, 
+        rgba(156, 39, 176, 0.2) 0%, 
+        rgba(33, 150, 243, 0.2) 100%);
+}
+
+blockquote {
+    margin: var(--spacing-md) 0;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-left: 4px solid var(--color-primary);
+    background-color: rgba(156, 39, 176, 0.1);
+    font-style: italic;
+    border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0;
+}
+
+strong {
+    color: var(--color-secondary-light);
+    font-weight: 700;
+}
+
+/* Nota introductoria */
+
+
+.intro-note {
+    background: var(--color-dark-light);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    margin-bottom: var(--spacing-lg);
+    position: relative;
+    border-left: 4px solid var(--color-secondary);
+}
+
+.intro-note::before {
+    content: '\f0eb'; /* Fontawesome lightbulb */
+    font-family: 'Font Awesome 5 Free', 'FontAwesome', sans-serif;
     font-weight: 900;
     position: absolute;
-    left: 0;
-    color: #25d366;
-    font-size: 1.2em;
-    top: 0.1em;
-}
-.checks-list li {
-    position: relative;
-    padding-left: 2em;
-    margin-bottom: var(--spacing-xs);
-}
-.checks-list li::before {
-    content: '\2713'; /* Checkmark */
-    color: var(--color-accent);
-    font-size: 1.2em;
-    position: absolute;
-    left: 0;
-    top: 0.1em;
+    top: 10px;
+    right: 10px;
+    font-size: 2.4rem;
+    color: var(--color-secondary);
+    opacity: 0.3;
 }
 
-.whatsapp-list li, .checks-list li { 
-    margin-bottom: var(--spacing-xs); /* Usando variable */
-}
-.conclusion-box { 
-    background: var(--color-surface); /* Usando variable */
-    padding: var(--spacing-md); /* Usando variable */
-    border-left: 4px solid var(--color-accent); /* Usando variable */
-    margin-top: var(--spacing-lg); /* Usando variable */
-    border-radius: var(--border-radius-sm); /* Usando variable */
-}
-.conclusion-box h3 { 
-    margin-top: 0; 
-    color: var(--color-accent); /* Usando variable */
+.intro-note h3 {
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-sm);
     font-family: var(--font-secondary);
 }
-footer { 
-    text-align: center; 
-    padding: var(--spacing-md); /* Usando variable */
-    color: var(--color-text-secondary); 
-    background: var(--color-dark-light); 
-    margin-top: var(--spacing-lg); 
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: var(--spacing-md);
+    color: var(--color-text-secondary);
+    background: var(--color-dark-light);
+    margin-top: var(--spacing-lg);
+    font-size: 1.4rem;
+}
+
+/* Animaciones */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(156, 39, 176, 0.3), 0 0 10px rgba(33, 150, 243, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(156, 39, 176, 0.6), 0 0 20px rgba(33, 150, 243, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(156, 39, 176, 0.3), 0 0 10px rgba(33, 150, 243, 0.3);
+    }
+}
+
+/* Botones de código y paneles */
+.credits-container {
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-md);
+}
+
+.credit-buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    justify-content: stretch;
+    width: 100%;
+}
+
+.code-button {
+    background: linear-gradient(135deg, var(--color-dark-light), var(--color-card-bg));
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-md);
+    color: var(--color-text-primary);
+    padding: var(--spacing-xs) 10px;
+    font-family: var(--font-secondary);
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    position: relative;
+    overflow: hidden;
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 0 5px;
+}
+
+.code-button .concept-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    transition: color var(--transition-speed) ease;
+}
+
+.code-button .concept-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    transition: color var(--transition-speed) ease;
+}
+
+.code-button .concept-desc {
+    font-size: 1.4rem;
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: transform var(--transition-speed) ease;
+}
+
+.code-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, 
+        rgba(156, 39, 176, 0.1) 0%, 
+        rgba(33, 150, 243, 0.1) 100%);
+    opacity: 0;
+    transition: opacity var(--transition-speed) ease;
+}
+
+.code-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border-color: var(--color-primary-light);
+}
+
+.code-button:hover::before {
+    opacity: 1;
+}
+
+.code-button.active {
+    background: linear-gradient(135deg, 
+        rgba(156, 39, 176, 0.3) 0%, 
+        rgba(33, 150, 243, 0.3) 100%);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 15px rgba(156, 39, 176, 0.4);
+    transform: translateY(-3px);
+}
+
+.code-button:hover .concept-name {
+    color: var(--color-secondary-light);
+}
+
+.code-button:hover .concept-desc {
+    transform: scale(1.05);
+}
+
+.code-examples {
+    position: relative;
+    min-height: 400px;
+    margin-top: var(--spacing-md);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-lg);
+    background-color: var(--color-dark);
+    overflow: hidden;
+}
+
+.code-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: var(--spacing-md);
+    display: none;
+    overflow-y: auto;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.code-panel.active {
+    display: block;
+}
+
+.code-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: var(--spacing-md);
+    display: none;
+    overflow-y: auto;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.code-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+}
+
+/* Panel de código */
+.code-panel h3 {
+    font-family: var(--font-secondary);
+    font-size: 2.4rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text-primary);
+}
+
+.code-panel h3 .gradient-text {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.code-panel pre {
+    background-color: #282c34;
+    border-radius: var(--border-radius-md);
+    padding: 0.8rem 1.1rem;
+    overflow-x: auto;
+    max-height: 400px;
+    margin-bottom: 0.8rem;
+    border: 1px solid #3e4451;
+}
+
+.code-panel code {
+    font-family: 'Fira Code', 'Courier New', monospace;
+    font-size: 1.18rem;
+    line-height: 1.35;
+}
+
+.code-panel code .hljs-comment, .code-panel code .hljs-quote {
+    color: #6a9955 !important; /* Verde tipo IntelliJ para comentarios */
+    font-style: italic;
+    opacity: 0.95;
+}
+
+.code-comment {
+    background-color: rgba(156, 39, 176, 0.1);
+    border-left: 3px solid var(--color-primary);
+    padding: var(--spacing-sm);
+    border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0;
+    font-style: italic;
+    color: var(--color-text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .escena-row, .escena-row.reverse {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .escena-img-placeholder {
+        width: 100vw;
+        min-width: 0;
+        height: 260px;
+        max-height: 260px;
+        overflow: hidden;
+        margin-left: -16px;
+        margin-right: -16px;
+        border-radius: var(--border-radius-md);
+        background: var(--color-card-bg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .escena-img-placeholder img {
+        width: 100vw;
+        max-width: 100vw;
+        height: 260px;
+        max-height: 260px;
+        object-fit: cover;
+        display: block;
+        margin: 0;
+        border-radius: var(--border-radius-md);
+        box-shadow: none;
+    }
+
+    .pildora {
+        margin: 8rem var(--spacing-sm) 3rem;
+        padding: var(--spacing-sm);
+    }
+
+    .pildora-title {
+        font-size: 2.8rem;
+    }
+
+    .pildora-subtitle {
+        font-size: 1.8rem;
+    }
+
+    .escena h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .pildora-title {
+        font-size: 2.4rem;
+    }
+
+    blockquote {
+        padding: var(--spacing-sm);
+    }
 }
