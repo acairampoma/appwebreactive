@@ -470,19 +470,7 @@ p {
     border-color: #2eccfa !important;
     box-shadow: 0 8px 40px #2eccfa66;
 }
-    display: block;
-    text-align: center;
-    font-size: 1.25rem;
-    font-weight: 800;
-    color: #fff;
-    margin: 0.6rem 0 1.2rem 0;
-    letter-spacing: 1px;
-    -webkit-text-stroke: 0.5px #2eccfa;
-    text-shadow: 0 0 8px #2eccfa22;
-    background: none;
-    border-radius: 0;
-    padding: 0;
-}
+
 .plan-card:hover {
     transform: translateY(-8px) scale(1.025);
     box-shadow: 0 8px 32px #0004;
@@ -547,8 +535,7 @@ p {
     text-shadow: 0 0 4px #2eccfa22;
 }
 
-    font-weight: 700;
-}
+  
 .plan-price {
     font-size: 1.25rem;
     background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
@@ -642,21 +629,6 @@ p {
     padding: 0 !important;
 }
 
-    margin-bottom: 1.2rem !important;
-    margin-top: 0.3rem !important;
-    width: 100%;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 0.35rem !important;
-    /* Sin fondo, sin borde, sin sombra, sin padding */
-    background: none !important;
-    border: none !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-}
-}
 .plan-card .plan-price > span {
     min-width: 68px !important;
 }
@@ -677,48 +649,32 @@ p {
     padding: 0 !important;
 }
 
-    margin-bottom: 1.5rem !important;
-    margin-top: 0.5rem !important;
-    width: 100%;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 1.2rem !important;
-    background: #13132a !important;
-    border: 3px solid #2eccfa !important;
-    border-radius: 14px !important;
-    padding: 0.6rem 1.5rem !important;
-    box-shadow: 0 0 18px #2eccfa99 !important;
-}
+
 .plan-card .plan-price > span {
     min-width: 85px !important;
 }
 @media (max-width: 600px) {
-    /* --- PLAN PRICE FLEX ALIGNMENT --- */
-/* --- SOLO UNA REGLA LIMPIA PARA .plan-price --- */
-.plan-card .plan-price {
-    margin-bottom: 1.2rem !important;
-    margin-top: 0.3rem !important;
-    width: 100%;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 0.35rem !important;
-    background: none !important;
-    border: none !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-}
-
+    .plan-card .plan-price {
+        margin-bottom: 1.2rem !important;
+        margin-top: 0.3rem !important;
+        width: 100%;
+        display: flex !important;
         flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
         gap: 0.5rem !important;
+        background: none !important;
+        border: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        padding: 0 !important;
     }
     .plan-hour-box, .plan-cost-box {
         width: 100% !important;
         margin-bottom: 0.4rem !important;
     }
 }
+
 
 /* Dropdown para el menú principal */
 .nav-dropdown {
