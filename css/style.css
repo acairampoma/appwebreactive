@@ -106,11 +106,38 @@ p {
 
 .section-title {
     text-align: center;
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: 7rem;
     position: relative;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
+
+/* LIMPIEZA Y AJUSTE DE PORTAFOLIO */
+.portfolio {
+    padding-top: 0;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: 0;
+}
+
+.portfolio-card {
+    margin-top: 0;
+}
+
+/* ESPACIO REAL ENTRE TÍTULO Y TARJETAS DE PORTAFOLIO */
+.portfolio .portfolio-grid {
+    margin-top: 0 !important;
+}
+
+.portfolio .section-title {
+    margin-bottom: 7rem !important;
+}
+
+
 
 .section-title::after {
     content: '';
@@ -177,6 +204,562 @@ p {
 }
 
 /* ================ HEADER & NAVIGATION ================ */
+
+/* ========== ABOUT WORDREACTIVE SECTION ========== */
+.about-benefit-check {
+    list-style: none;
+    padding-left: 0;
+    margin: 1.2rem 0 1.2rem 0;
+}
+.about-benefit-check li {
+    font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+    color: #fff;
+    font-size: 1.18rem;
+    margin-bottom: 0.7rem;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+.about-benefit-check li i {
+    color: #1de982;
+    margin-right: 0.7em;
+    font-size: 1.25em;
+    min-width: 1.5em;
+    text-shadow: 0 0 6px #0f0, 0 0 2px #fff;
+}
+
+.about-wordreactive {
+    background: #101014;
+    color: #fff;
+    padding: 3rem 0 2rem 0;
+    border-radius: 0 0 24px 24px;
+    box-shadow: 0 6px 32px #0003;
+    margin-bottom: 2.5rem;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+.about-wordreactive .section-title {
+    font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+.about-content {
+    max-width: 1020px;
+    margin: 0 auto;
+    font-size: 1.35rem;
+    line-height: 1.7;
+    padding-left: 0.5rem;
+    padding-right: 1rem;
+}
+
+.about-flex {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.about-left {
+    flex: 1 1 55%;
+    min-width: 300px;
+}
+.about-right {
+    flex: 1 1 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about-img-box {
+    background: #18182a;
+    padding: 1.2rem;
+    border-radius: 18px;
+    box-shadow: 0 4px 20px #0003;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 330px;
+}
+.about-img {
+    max-width: 260px;
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px #0004;
+    display: block;
+}
+.about-orbitron-lead {
+    font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    margin-bottom: 1.5rem;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+    width: 100%;
+    display: block;
+    /* Efecto borde reactivo más sutil */
+    -webkit-text-stroke: 1px #23d1ff;
+    text-shadow:
+      0 0 4px #23d1ff,
+      0 0 8px #a259ff;
+    background: linear-gradient(90deg,#a259ff 0%,#2eccfa 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: #fff;
+    box-decoration-break: clone;
+}
+
+.about-orbitron-lead.centered-silver-gold {
+    text-align: center;
+    font-size: 2.7rem;
+    color: #fff;
+    background: none;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    -webkit-text-fill-color: #fff;
+    -webkit-text-stroke: 1.2px #7ed6fa;
+    text-shadow:
+      0 0 6px #7ed6fa44,
+      0 0 14px #7ed6fa22;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    margin-bottom: 1.7rem;
+    margin-top: 1.7rem;
+}
+
+
+.about-orbitron-lead.align-left {
+    font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    margin-bottom: 1.5rem;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+    width: 100%;
+    display: block;
+    -webkit-text-stroke: 1px #23d1ff;
+    text-shadow:
+      0 0 4px #23d1ff,
+      0 0 8px #a259ff;
+    background: linear-gradient(90deg,#a259ff 0%,#2eccfa 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: #fff;
+    box-decoration-break: clone;
+}
+
+
+
+@media (max-width: 950px) {
+    .about-orbitron-lead {
+        font-size: 1.3rem;
+        text-align: left;
+        margin-left: 0;
+        -webkit-text-stroke: 1px #23d1ff;
+    }
+}
+
+.about-bullets {
+    margin: 1.3rem 0 1.3rem 0;
+    padding-left: 1.7rem;
+}
+.about-bullets li {
+    margin-bottom: 0.7rem;
+    font-weight: 600;
+    color: var(--color-primary-light);
+    list-style: disc inside;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+.about-highlight {
+    background: linear-gradient(90deg, #23234a 0%, #1c1c2b 100%);
+    border-radius: 10px;
+    padding: 1.2rem 2rem;
+    margin: 1.2rem 0 1.2rem 0;
+    color: #e0e0e0;
+    font-size: 1.15em;
+    box-shadow: 0 2px 10px #0002;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+.about-orbitron-highlight {
+    font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+    color: #fff;
+    font-size: 1.25rem;
+    -webkit-text-stroke: 1px #2eccfa;
+    text-shadow:
+      0 0 2px #2eccfa,
+      0 0 6px #a259ff;
+    background: linear-gradient(90deg,#a259ff 0%,#2eccfa 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: #fff;
+    box-decoration-break: clone;
+}
+
+.about-benefits {
+    margin: 1.3rem 0 1.3rem 0;
+    padding-left: 1.7rem;
+}
+.about-benefits li {
+    margin-bottom: 0.5rem;
+    list-style: square inside;
+    color: #fff;
+    font-weight: 400;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+.about-cta {
+    font-size: 1.3rem;
+    text-align: left;
+    margin-top: 2.2rem;
+    color: #fff;
+    letter-spacing: 1px;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+@media (max-width: 950px) {
+    .about-content {
+        padding: 0 1rem;
+    }
+    .about-flex {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .about-left, .about-right {
+        width: 100%;
+        min-width: unset;
+    }
+    .about-img-box {
+        max-width: 95vw;
+    }
+    .about-img {
+        max-width: 320px;
+    }
+}
+
+/* ========== PLANES CARDS ========== */
+.plans-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+.plan-card {
+    background: #18182a;
+    color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px #0002;
+    padding: 2.2rem 2rem 1.5rem 2rem;
+    max-width: 330px;
+    flex: 1 1 270px;
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2.5px solid #fff !important;
+    box-shadow: 0 4px 32px #2eccfa33;
+    transition: transform 0.15s, box-shadow 0.15s, border-color 0.3s;
+}
+.plan-card.premium {
+    border: 2.5px solid #fff !important;
+}
+.plan-card:hover, .plan-card.premium:hover {
+    border-color: #2eccfa !important;
+    box-shadow: 0 8px 40px #2eccfa66;
+}
+    display: block;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #fff;
+    margin: 0.6rem 0 1.2rem 0;
+    letter-spacing: 1px;
+    -webkit-text-stroke: 0.5px #2eccfa;
+    text-shadow: 0 0 8px #2eccfa22;
+    background: none;
+    border-radius: 0;
+    padding: 0;
+}
+.plan-card:hover {
+    transform: translateY(-8px) scale(1.025);
+    box-shadow: 0 8px 32px #0004;
+    border-color: var(--color-primary);
+}
+.plan-card h3, .plan-card .plan-hours, .plan-card .plan-list, .plan-card li {
+    font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+}
+.plan-card h3.section-title {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+    color: #fff;
+    -webkit-text-stroke: 0px;
+    text-shadow: none;
+    font-weight: 900;
+    letter-spacing: 1.2px;
+}
+.plan-title-gradient {
+    background: linear-gradient(90deg, #a259ff 0%, #2eccfa 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+}
+.plan-card h3.section-title .highlight {
+    color: #2eccfa;
+    -webkit-text-stroke: 0px;
+    text-shadow: none;
+}
+.plan-card .plan-hours {
+    font-size: 1.35rem;
+    color: #2eccfa;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    -webkit-text-stroke: 1px #2eccfa;
+    text-shadow: 0 0 6px #2eccfa33;
+}
+.plan-card .plan-hours i.fas.fa-bolt {
+    font-size: 1.5em;
+    margin-right: 0.4em;
+    color: #2eccfa;
+    filter: drop-shadow(0 0 7px #2eccfa66);
+}
+.plan-card .plan-list {
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none;
+}
+.plan-card .plan-list li {
+    font-size: 1.12rem;
+    color: #e0e0e0;
+    margin-bottom: 0.6rem;
+    position: relative;
+    padding-left: 0;
+    -webkit-text-stroke: 0.7px #2eccfa;
+    text-shadow: 0 0 4px #2eccfa22;
+}
+
+    font-weight: 700;
+}
+.plan-price {
+    font-size: 1.25rem;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    color: #fff;
+    border-radius: 8px;
+    padding: 0.5rem 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 2px 8px #0002;
+    display: inline-block;
+}
+.plan-card ul {
+    margin-left: 1.2rem;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+.plan-card li {
+    margin-bottom: 0.6rem;
+    list-style: disc inside;
+    font-size: 1.22rem;
+    color: #e0e0e0;
+    font-family: 'Roboto', Arial, sans-serif !important;
+}
+.plan-card.premium {
+    border: 2.5px solid var(--color-secondary);
+    background: #1a1a2e;
+}
+@media (max-width: 900px) {
+    .plans-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .plan-card {
+        max-width: 95%;
+        width: 100%;
+    }
+}
+
+.plan-hour-box {
+    display: inline-block !important;
+    font-family: 'Orbitron', 'Roboto', Arial, sans-serif !important;
+    font-size: 1.25rem !important;
+    font-weight: 900 !important;
+    color: #2eccfa !important;
+    background: #18182a !important;
+    border: 2px solid #2eccfa !important;
+    border-radius: 8px !important;
+    padding: 0.35rem 1.1rem !important;
+    margin: 0 0.15rem !important;
+    box-shadow: 0 0 6px #2eccfa33 !important;
+    letter-spacing: 1.1px !important;
+    text-align: center !important;
+    -webkit-text-stroke: 0px !important;
+    text-shadow: none !important;
+    vertical-align: middle !important;
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+.plan-cost-box {
+    display: inline-block !important;
+    font-family: 'Orbitron', 'Roboto', Arial, sans-serif !important;
+    font-size: 1.25rem !important;
+    font-weight: 900 !important;
+    color: #2eccfa !important;
+    background: #18182a !important;
+    border: 2px solid #fff !important;
+    border-radius: 8px !important;
+    padding: 0.35rem 1.1rem !important;
+    margin: 0 0.15rem !important;
+    box-shadow: 0 0 6px #fff3 !important;
+    letter-spacing: 1.1px !important;
+    text-align: center !important;
+    -webkit-text-stroke: 0px !important;
+    text-shadow: none !important;
+    vertical-align: middle !important;
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+/* --- PLAN PRICE FLEX ALIGNMENT --- */
+/* --- SOLO UNA REGLA LIMPIA PARA .plan-price --- */
+.plan-card .plan-price {
+    margin-bottom: 1.2rem !important;
+    margin-top: 0.3rem !important;
+    width: 100%;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 0.35rem !important;
+    background: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+    margin-bottom: 1.2rem !important;
+    margin-top: 0.3rem !important;
+    width: 100%;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 0.35rem !important;
+    /* Sin fondo, sin borde, sin sombra, sin padding */
+    background: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+}
+.plan-card .plan-price > span {
+    min-width: 68px !important;
+}
+/* --- PLAN PRICE FLEX ALIGNMENT --- */
+/* --- SOLO UNA REGLA LIMPIA PARA .plan-price --- */
+.plan-card .plan-price {
+    margin-bottom: 1.2rem !important;
+    margin-top: 0.3rem !important;
+    width: 100%;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 0.35rem !important;
+    background: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+    margin-bottom: 1.5rem !important;
+    margin-top: 0.5rem !important;
+    width: 100%;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 1.2rem !important;
+    background: #13132a !important;
+    border: 3px solid #2eccfa !important;
+    border-radius: 14px !important;
+    padding: 0.6rem 1.5rem !important;
+    box-shadow: 0 0 18px #2eccfa99 !important;
+}
+.plan-card .plan-price > span {
+    min-width: 85px !important;
+}
+@media (max-width: 600px) {
+    /* --- PLAN PRICE FLEX ALIGNMENT --- */
+/* --- SOLO UNA REGLA LIMPIA PARA .plan-price --- */
+.plan-card .plan-price {
+    margin-bottom: 1.2rem !important;
+    margin-top: 0.3rem !important;
+    width: 100%;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 0.35rem !important;
+    background: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+    }
+    .plan-hour-box, .plan-cost-box {
+        width: 100% !important;
+        margin-bottom: 0.4rem !important;
+    }
+}
+
+/* Dropdown para el menú principal */
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #121212;
+    min-width: 180px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    border-radius: 0 0 8px 8px;
+    z-index: 1001;
+    padding: 0.5rem 0;
+}
+
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 0;
+}
+
+.dropdown-menu .nav-link {
+    padding: 1rem 2rem;
+    display: block;
+    color: #fff;
+    font-size: 1.3rem;
+    text-align: left;
+}
+
+.dropdown-menu .nav-link:hover {
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    color: #fff;
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -820,12 +1403,12 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    margin-bottom: var(--spacing-sm);
-    background: linear-gradient(135deg, var(--color-primary-dark), var(--color-secondary-dark));
-    color: var(--color-text-primary);
+    margin: 0 auto 1.2rem auto;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: #fff;
     font-size: 2.4rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
@@ -920,6 +1503,7 @@ p {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: var(--spacing-md);
+    margin-top: 2.5rem;
 }
 
 .portfolio-card {
@@ -939,6 +1523,8 @@ p {
 }
 
 .portfolio-logo {
+  position: relative;
+}
     width: 80px;
     height: 80px;
     margin: 0 auto var(--spacing-md);
@@ -950,6 +1536,7 @@ p {
 }
 
 .gradient-circle {
+  position: relative; /* para centrar el icono */
     width: 100%;
     height: 100%;
     background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
@@ -957,6 +1544,8 @@ p {
 }
 
 .portfolio-card h3 {
+  margin-bottom: 1.2rem;
+
     margin-bottom: var(--spacing-sm);
     font-size: 1.8rem;
 }

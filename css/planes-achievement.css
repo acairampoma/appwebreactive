@@ -1,0 +1,111 @@
+/* Estilos para la sección de logros del Plan Trueno - Versión final */
+
+:root {
+    --primary: #8A56FF;
+    --secondary: #0EA5E9;
+    --dark: #0F172A;
+    --darker: #090d18;
+    --light: #F8FAFC;
+    --accent: #10B981;
+    --border-light: rgba(255, 255, 255, 0.08);
+}
+
+/* Contenedor principal de logros */
+.plan-achievement {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: auto;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 14px 14px;
+    padding: 1rem 1.2rem;
+    font-family: 'Poppins', 'Montserrat', Arial, sans-serif;
+    border-top: 1px solid var(--border-light);
+}
+
+/* Fila de logros (contiene etiqueta y valor) */
+.plan-achievement-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding-right: 8px;
+}
+
+.plan-achievement-row:last-child {
+    margin-bottom: 0;
+}
+
+/* Etiquetas de logros (Frecuencia, Lograrás, Sueldo) */
+.plan-achievement-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.2px;
+    text-align: left;
+    width: 120px;
+}
+
+/* Valores estándar (ej: "3 veces por semana", "Pasar Entrevista Junior") */
+.plan-achievement-value {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 150px;
+    box-sizing: border-box;
+    font-weight: 600;
+    padding: 0.4rem 0.7rem;
+    border-radius: 6px;
+    background: var(--darker);
+    border: 1.5px solid #fff;
+    color: var(--light);
+    font-size: 0.9rem;
+    text-align: left;
+    letter-spacing: 0.2px;
+    box-shadow: 0 0 12px #fff8, 0 0 2px #fff;
+}
+
+/* Valor especial para el sueldo (color verde) */
+.plan-achievement-salary {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 150px;
+    box-sizing: border-box;
+    font-weight: 600;
+    padding: 0.4rem 0.7rem;
+    border-radius: 6px;
+    background: var(--darker);
+    border: 1.5px solid #fff;
+    color: var(--light);
+    font-size: 0.9rem;
+    text-align: left;
+    letter-spacing: 0.2px;
+    box-shadow: 0 0 12px #fff8, 0 0 2px #fff;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 480px) {
+    .plan-achievement {
+        padding: 0.8rem 1rem;
+    }
+    
+    .plan-achievement-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .plan-achievement-label {
+        font-size: 0.85rem;
+        margin-bottom: 0.1rem;
+    }
+    
+    .plan-achievement-value,
+    .plan-achievement-salary {
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 0.4rem 0.7rem;
+    }
+}
