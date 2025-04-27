@@ -117,21 +117,21 @@ p {
     padding-top: 0;
 }
 
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-md);
-    margin-top: 0;
-}
 
 .portfolio-card {
+    background-color: var(--color-card-bg);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-md);
+    text-align: center;
+    box-sizing: border-box;
+    flex: 0 0 300px;
+    opacity: 0.7;
+    transform: scale(0.95);
+    transition: opacity 0.3s ease, transform 0.3s ease;
     margin-top: 0;
 }
 
-/* ESPACIO REAL ENTRE TÍTULO Y TARJETAS DE PORTAFOLIO */
-.portfolio .portfolio-grid {
-    margin-top: 0 !important;
-}
+/* Regla eliminada para permitir separación real entre título y tarjetas de portafolio */
 
 .portfolio .section-title {
     margin-bottom: 7rem !important;
@@ -287,61 +287,98 @@ p {
     box-shadow: 0 4px 16px #0004;
     display: block;
 }
-.about-orbitron-lead {
-    font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
-    font-size: 2.5rem;
-    color: #fff;
-    font-weight: 900;
-    letter-spacing: 1.5px;
-    margin-bottom: 1.5rem;
-    margin-left: 0;
-    margin-right: 0;
-    text-align: left;
-    width: 100%;
-    display: block;
-    /* Efecto borde reactivo más sutil */
-    -webkit-text-stroke: 1px #23d1ff;
-    text-shadow:
-      0 0 4px #23d1ff,
-      0 0 8px #a259ff;
-    background: linear-gradient(90deg,#a259ff 0%,#2eccfa 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: #fff;
-    box-decoration-break: clone;
+.about-block {
+    background: linear-gradient(135deg, rgba(20,22,34,0.90) 0%, rgba(32,34,44,0.94) 100%);
+    border: 2.5px solid rgba(255,255,255,0.15);
+    border-radius: 28px;
+    padding: 2.7rem 2.5rem 2.2rem 2.5rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 0 16px 2px rgba(255,255,255,0.12), 0 4px 32px #0006;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    backdrop-filter: blur(2.5px);
+    -webkit-backdrop-filter: blur(2.5px);
+    transition: box-shadow 0.3s, border-color 0.3s;
+    /* Homogeneizar tipografía y color para ambos bloques */
+    font-family: var(--font-primary), 'Roboto', Arial, sans-serif;
+    font-size: 1.7rem;
+    color: var(--color-text-primary);
+    line-height: 1.6;
+}
+
+.about-block p, .about-block ul, .about-block li {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    line-height: inherit;
 }
 
 .about-orbitron-lead.centered-silver-gold {
     text-align: center;
     font-size: 2.7rem;
     color: #fff;
-    background: none;
-    -webkit-background-clip: border-box;
-    background-clip: border-box;
-    -webkit-text-fill-color: #fff;
     -webkit-text-stroke: 1.2px #7ed6fa;
-    text-shadow:
-      0 0 6px #7ed6fa44,
-      0 0 14px #7ed6fa22;
+    text-shadow: 0 0 6px #7ed6fa44, 0 0 14px #7ed6fa22;
     font-weight: 900;
     letter-spacing: 1.5px;
     margin-bottom: 1.7rem;
     margin-top: 1.7rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    display: block;
+}
+
+.feature-list li {
+    font-size: 1.25rem;
+    color: #fff;
+    margin-bottom: 0.9rem;
+    display: flex;
+    align-items: flex-start;
 }
 
 
-.about-orbitron-lead.align-left {
+
+
+
+
+
+.about-block:hover {
+    box-shadow: 0 0 32px 6px rgba(255,255,255,0.18), 0 8px 48px #0008;
+    border-color: rgba(255,255,255,0.24);
+}
+
+/* Sugerencia visual: usa solo iconos o solo bullets, nunca ambos en .about-bullets */
+.about-bullets {
+    list-style: none;
+    padding-left: 0;
+}
+.about-bullets li {
+    margin-bottom: 1.1rem;
+    font-size: 1.3em;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Forzar tamaño de fuente en bullets dentro de .about-block */
+.about-block .about-bullets li {
+    font-size: 1.5rem !important;
+}
+.about-bullets li i {
+    margin-right: 0.7em;
+    color: #fff;
+    font-size: 1em;
+    flex-shrink: 0;
+}
+
+.about-orbitron-lead {
     font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
     font-size: 2.5rem;
-    color: #fff;
+    color: #b8eaff;
     font-weight: 900;
     letter-spacing: 1.5px;
     margin-bottom: 1.5rem;
-    margin-left: 0;
-    margin-right: 0;
-    text-align: left;
-    width: 100%;
-    display: block;
     -webkit-text-stroke: 1px #23d1ff;
     text-shadow:
       0 0 4px #23d1ff,
@@ -354,27 +391,53 @@ p {
 }
 
 
-
-@media (max-width: 950px) {
-    .about-orbitron-lead {
-        font-size: 1.3rem;
-        text-align: left;
-        margin-left: 0;
-        -webkit-text-stroke: 1px #23d1ff;
-    }
+.section-title {
+    text-align: center;
+    margin-bottom: 7rem;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-.about-bullets {
-    margin: 1.3rem 0 1.3rem 0;
-    padding-left: 1.7rem;
+
+.about-block {
+    font-weight: 400;
 }
-.about-bullets li {
-    margin-bottom: 0.7rem;
-    font-weight: 600;
-    color: var(--color-primary-light);
-    list-style: disc inside;
-    font-family: 'Roboto', Arial, sans-serif;
+
+.about-block strong {
+    font-weight: 400;
 }
+
+/* --- UNIFICACIÓN DE TÍTULOS PRINCIPALES --- */
+.about-orbitron-lead {
+    font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+    font-size: 2.5rem;
+    color: #b8eaff;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    margin-bottom: 1.5rem;
+    -webkit-text-stroke: 1px #23d1ff;
+    text-shadow: 0 0 4px #23d1ff, 0 0 8px #a259ff;
+    background: linear-gradient(90deg,#a259ff 0%,#2eccfa 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: #fff;
+    box-decoration-break: clone;
+    text-align: center;
+}
+
+/* --- LISTA DE BENEFICIOS REACTIVOS --- */
+.feature-list li {
+    font-size: 1.45rem;
+    color: #fff;
+    margin-bottom: 0.9rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+
+
+
 .about-highlight {
     background: linear-gradient(90deg, #23234a 0%, #1c1c2b 100%);
     border-radius: 10px;
@@ -675,6 +738,12 @@ p {
     }
 }
 
+
+.section-separator {
+    height: 4rem;
+    width: 100%;
+    display: block;
+}
 
 /* Dropdown para el menú principal */
 .nav-dropdown {
@@ -1459,7 +1528,8 @@ p {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: var(--spacing-md);
-    margin-top: 2.5rem;
+    position: relative;  /* Añadido */
+    z-index: 2;          /* Añadido */
 }
 
 .portfolio-card {
@@ -1479,8 +1549,7 @@ p {
 }
 
 .portfolio-logo {
-  position: relative;
-}
+    position: relative;
     width: 80px;
     height: 80px;
     margin: 0 auto var(--spacing-md);
@@ -1490,6 +1559,7 @@ p {
     align-items: center;
     justify-content: center;
 }
+
 
 .gradient-circle {
   position: relative; /* para centrar el icono */
@@ -1578,16 +1648,99 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 60px;
-    min-height: 60px;
-    width: 60px;
-    height: 60px;
+    min-width: 68px;
+    min-height: 68px;
+    margin: 0 2rem;
+    background: none;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-    color: var(--color-text-primary);
+    z-index: 1;
+}
+
+.arrow-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 68px;
+    height: 68px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    border-radius: 50%;
+    box-shadow: 0 2px 8px 0 #2196f344, 0 0 0 2.5px #9c27b055;
+    border: 2px solid #fff1;
+    outline: none;
+    color: #fff;
     font-size: 1.8rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    margin: 0 auto; /* Centra el divisor en dispositivos móviles */
+    transition: box-shadow 0.22s, transform 0.18s;
+    position: relative;
+}
+
+.arrow-circle i {
+    margin: 0;
+    padding: 0;
+    font-size: 1.6rem;
+    color: #fff;
+    filter: none;
+}
+
+.divider:focus-within .arrow-circle,
+.divider:hover .arrow-circle {
+    transform: scale(1.07) rotate(8deg);
+    box-shadow: 0 4px 18px 0 #2196f344, 0 0 0 4px #9c27b055;
+}
+
+@media (max-width: 900px) {
+    .divider, .arrow-circle {
+        min-width: 48px;
+        min-height: 48px;
+        width: 48px;
+        height: 48px;
+    }
+    .arrow-circle i {
+        font-size: 1.1rem;
+    }
+    .divider {
+        margin: var(--spacing-md) auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .comparison {
+        flex-direction: column;
+    }
+    .divider {
+        margin: var(--spacing-md) auto;
+        transform: rotate(90deg); /* Flecha hacia abajo en dispositivos móviles */
+    }
+    .arrow-circle {
+        transform: rotate(-90deg);
+    }
+}
+
+@media (max-width: 900px) {
+    .divider, .arrow-circle {
+        min-width: 64px;
+        min-height: 64px;
+        width: 64px;
+        height: 64px;
+    }
+    .arrow-circle i {
+        font-size: 1.8rem;
+    }
+    .divider {
+        margin: var(--spacing-md) auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .comparison {
+        flex-direction: column;
+    }
+    .divider {
+        margin: var(--spacing-md) auto;
+        transform: rotate(90deg); /* Flecha hacia abajo en dispositivos móviles */
+    }
+    .arrow-circle {
+        transform: rotate(-90deg);
+    }
 }
 
 .pain-points, .achievements {
@@ -2140,10 +2293,7 @@ p {
 }
 
 /* ================ PORTFOLIO CAROUSEL ================ */
-.portfolio-grid {
-    position: relative;
-    overflow: hidden;
-}
+
 
 .portfolio-track {
     display: flex;
