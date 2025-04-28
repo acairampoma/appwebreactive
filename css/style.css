@@ -330,6 +330,31 @@ p {
     display: block;
 }
 
+/* Nuevo estilo alternativo */
+.about-orbitron-lead-alt {
+    font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+    font-size: 5rem;
+    color: #fff; /* Letra blanca */
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    margin-bottom: 1.7rem;
+    -webkit-text-stroke: 1.2px #7ed6fa; /* Borde azul más claro y fino */
+    text-shadow:
+        0 0 4px #7ed6fa55,   /* Glow azul muy suave */
+        0 0 8px #23d1ff33;   /* Glow azul aún más sutil */
+    background: none;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: #fff; /* Blanco sólido */
+    text-align: center;
+    text-transform: none;
+}
+
+.about-block .about-orbitron-lead-alt {
+    font-family: 'Orbitron', 'Roboto', Arial, sans-serif !important;
+}
+
+
 .feature-list li {
     font-size: 1.25rem;
     color: #fff;
@@ -337,12 +362,6 @@ p {
     display: flex;
     align-items: flex-start;
 }
-
-
-
-
-
-
 
 .about-block:hover {
     box-shadow: 0 0 32px 6px rgba(255,255,255,0.18), 0 8px 48px #0008;
