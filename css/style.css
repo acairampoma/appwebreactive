@@ -237,12 +237,9 @@ p {
     box-shadow: 0 6px 32px #0003;
     margin-bottom: 2.5rem;
     font-family: 'Roboto', Arial, sans-serif;
+    position: relative;
+    overflow: visible;
 }
-.about-wordreactive .section-title {
-    font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
-    font-size: 3rem;
-    text-align: center;
-    margin-bottom: 2rem;
     letter-spacing: 1px;
 }
 .about-content {
@@ -278,16 +275,51 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 330px;
+    max-width: 497px;
+    width: 100%;
+    margin: 0 auto;
 }
 .about-img {
-    max-width: 260px;
     width: 100%;
+    max-width: 497px;
+    height: auto;
+    display: block;
     border-radius: 14px;
     box-shadow: 0 4px 16px #0004;
-    display: block;
 }
 .about-block {
+    background: linear-gradient(135deg, rgba(20,22,34,0.90) 0%, rgba(32,34,44,0.94) 100%);
+    border: 2.2px solid rgba(80,160,255,0.35) !important;
+    border-radius: 28px;
+    padding: 2.7rem 2.5rem 2.2rem 2.5rem;
+    margin-bottom: 3rem;
+    box-shadow:
+      0 0 18px 3px #3e3eff44,
+      0 0 28px 7px #a259ff33,
+      0 0 0 3px #2eccfa22;
+    max-width: 810px;
+    margin-left: 0;
+    margin-right: auto;
+    backdrop-filter: blur(2.5px);
+    -webkit-backdrop-filter: blur(2.5px);
+    transition: box-shadow 0.3s, border-color 0.3s;
+    /* Homogeneizar tipografía y color para ambos bloques */
+}
+
+.about-block-3col {
+    max-width: none !important;
+    width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box;
+}
+    font-family: var(--font-primary), 'Roboto', Arial, sans-serif;
+    font-size: 1.7rem;
+    color: var(--color-text-primary);
+    line-height: 1.6;
+}
+
+.about-blockreactive {
     background: linear-gradient(135deg, rgba(20,22,34,0.90) 0%, rgba(32,34,44,0.94) 100%);
     border: 2.5px solid rgba(255,255,255,0.15);
     border-radius: 28px;
@@ -300,7 +332,6 @@ p {
     backdrop-filter: blur(2.5px);
     -webkit-backdrop-filter: blur(2.5px);
     transition: box-shadow 0.3s, border-color 0.3s;
-    /* Homogeneizar tipografía y color para ambos bloques */
     font-family: var(--font-primary), 'Roboto', Arial, sans-serif;
     font-size: 1.7rem;
     color: var(--color-text-primary);
@@ -2312,6 +2343,129 @@ p {
 }
 
 /* ================ PORTFOLIO CAROUSEL ================ */
+
+/* === TABLA PARA ABOUT WORDREACTIVE === */
+.about-table-3col {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 2rem 1.5rem;
+  margin-bottom: 2rem;
+}
+.about-table-3col tr {
+  height: 100%;
+}
+.about-table-3col td {
+  width: 33.33%;
+  height: 100%;
+  vertical-align: stretch;
+  background: none;
+  border: none;
+  padding: 0 0.5rem;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+.about-block-3col {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  max-width: 95%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.about-table-3col td {
+  vertical-align: top;
+  background: none;
+  border: none;
+  padding: 0;
+  width: 33.33%;
+}
+
+.about-table-3col .about-table-img {
+  width: 340px;
+  min-width: 220px;
+  max-width: 380px;
+  text-align: center;
+  vertical-align: middle;
+}
+.about-table-img {
+  width: 340px;
+  text-align: center;
+  vertical-align: middle;
+}
+.about-imgreactive {
+  max-width: 320px;
+  width: 90%;
+  height: auto;
+  border-radius: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  box-shadow:
+    0 0 12px 2px #3e3eff33,
+    0 0 20px 4px #a259ff33,
+    0 0 0 2px #2eccfa18;
+  outline: 3px solid transparent;
+  outline-offset: 0px;
+  transition: box-shadow 0.3s;
+}
+.about-imgreactive:hover {
+  box-shadow:
+    0 0 18px 6px #23d1ff44,
+    0 0 24px 10px #a259ff44,
+    0 0 0 4px #2eccfa22;
+}
+.about-table-title {
+  text-align: center;
+  background: none;
+  padding-top: 2.5rem;
+  padding-bottom: 1.5rem;
+}
+
+@media (max-width: 950px) {
+  .about-table-3col {
+    border-spacing: 0.5rem 1rem;
+  }
+  .about-table-img {
+    width: 200px;
+  }
+  .about-imgreactive {
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 700px) {
+  .about-table-3col, .about-table-3col tr, .about-table-3col td {
+    display: block;
+    width: 100%;
+  }
+  .about-block-3col {
+    margin: 1.2rem auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    width: auto;
+    max-width: 92vw;
+    box-sizing: border-box;
+  }
+  .about-table-img {
+    width: 100%;
+    text-align: center;
+    margin: 1.5rem 0;
+    padding: 0;
+  }
+  .about-imgreactive {
+    max-width: 60vw;
+    min-width: 120px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .about-table-title {
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+  }
+}
+
 
 
 .portfolio-track {
