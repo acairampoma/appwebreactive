@@ -128,9 +128,22 @@ async function mostrarPreguntasTemaNivel(tema, nivel) {
         // Obtener el nombre de archivo basado en el tema
         const nombreArchivo = mapaArchivos[tema] || tema.toLowerCase().replace(/\s+/g, '_').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
         
-        let urlFetch = `/preguntas/preguntas_${nombreArchivo}.json`;
+        // Determinar la ruta relativa basada en si estamos en GitHub Pages o local
+        // En GitHub Pages, el path puede ser diferente dependiendo de la estructura del repositorio
+        let urlFetch;
+        
+        if (window.location.hostname.includes('github.io')) {
+            // Estamos en GitHub Pages
+            // Ajustar la ruta según la estructura de tu repositorio en GitHub
+            urlFetch = `./preguntas/preguntas_${nombreArchivo}.json`;
+            console.log('Entorno GitHub Pages detectado');
+        } else {
+            // Estamos en desarrollo local
+            urlFetch = `./preguntas/preguntas_${nombreArchivo}.json`;
+        }
+        
         console.log('URL de fetch:', urlFetch);
-        console.log('Ruta completa desde la raiz:', window.location.origin + urlFetch);
+        console.log('Ruta completa:', new URL(urlFetch, window.location.href).href);
         
         // Intentar cargar desde el servidor local
         const resp = await fetch(urlFetch);
