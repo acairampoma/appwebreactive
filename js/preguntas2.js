@@ -134,7 +134,7 @@ async function mostrarPreguntasTemaNivel(tema, nivel) {
         
         if (window.location.hostname.includes('github.io')) {
             // Estamos en GitHub Pages
-            // Ajustar la ruta según la estructura del repositorio en GitHub
+            // Ajustar la ruta segu00fan la estructura del repositorio en GitHub
             // Si tu repo se llama 'appwebreactive', necesitamos incluirlo en la ruta
             urlFetch = `/appwebreactive/preguntas/preguntas_${nombreArchivo}.json`;
             console.log('Entorno GitHub Pages detectado');
