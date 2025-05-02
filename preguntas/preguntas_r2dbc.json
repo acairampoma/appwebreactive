@@ -1,0 +1,22 @@
+[
+  {"q":"¿Qué es R2DBC?","o":["Una especificación para acceso reactivo a bases de datos relacionales","Un nuevo tipo de base de datos","Un framework para frontend"],"a":0},
+  {"q":"¿Cuál es la ventaja de R2DBC sobre JDBC?","o":["Permite operaciones no bloqueantes","Es más lento","Solo funciona con MongoDB"],"a":0},
+  {"q":"¿Qué significa no bloqueante?","o":["No detiene el hilo mientras espera una operación","Bloquea la base de datos","Solo funciona en Python"],"a":0},
+  {"q":"¿Qué es un ConnectionFactory en R2DBC?","o":["Un objeto para crear conexiones a la base de datos","Una fábrica de datos","Un tipo de variable"],"a":0},
+  {"q":"¿Qué es un Publisher en R2DBC?","o":["Un objeto que emite resultados de una consulta","Un editor de texto","Un tipo de error"],"a":0},
+  {"q":"¿Para qué sirve DatabaseClient?","o":["Para ejecutar consultas de forma reactiva","Para diseñar bases de datos","Para borrar datos"],"a":0},
+  {"q":"¿Qué es un Mono en R2DBC?","o":["Un flujo que emite cero o un resultado","Un mono de zoológico","Un tipo de error"],"a":0},
+  {"q":"¿Qué es un Flux en R2DBC?","o":["Un flujo que puede emitir muchos resultados","Un flujo de agua","Un tipo de variable"],"a":0},
+  {"q":"¿Qué hace fetch() en DatabaseClient?","o":["Obtiene los resultados de la consulta","Elimina datos","Convierte a String"],"a":0},
+  {"q":"¿Qué es un Statement en R2DBC?","o":["Una consulta preparada para ejecutar","Una declaración de Java","Un error de compilación"],"a":0},
+  {"q":"¿Qué ventaja tiene el acceso reactivo a BD?","o":["Mejor uso de recursos y escalabilidad","Hace todo más lento","Solo funciona en la nube"],"a":0},
+  {"q":"¿Qué es un RowMapper?","o":["Una función para mapear filas de la BD a objetos","Un mapa de rutas","Un error de compilación"],"a":0},
+  {"q":"¿Qué hace el método bind()?","o":["Asigna valores a los parámetros de la consulta","Une dos tablas","Convierte a String"],"a":0},
+  {"q":"¿Qué es un TransactionManager?","o":["Gestiona transacciones de forma reactiva","Un gerente de banco","Un tipo de error"],"a":0},
+  {"q":"¿Qué es un pool de conexiones?","o":["Un conjunto de conexiones reutilizables","Una piscina de datos","Un bug"],"a":0},
+  {"q":"¿Qué es un error terminal en R2DBC?","o":["Un error que termina el flujo de datos","Un error en la terminal","Un bug de JavaScript"],"a":0},
+  {"q":"¿Para qué sirve el método subscribe()?","o":["Para empezar a consumir el flujo de datos","Para suscribirte a Netflix","Para borrar datos"],"a":0},
+  {"q":"¿Qué es un operador en R2DBC?","o":["Una función que transforma o manipula un flujo de datos","Un operador de telefonía","Un símbolo matemático"],"a":0},
+  {"q":"¿Qué es la propagación de cambios en R2DBC?","o":["Cuando una modificación en la BD se refleja automáticamente en los suscriptores","Cuando cambia el clima","Un error de red"],"a":0},
+  {"q":"¿Qué ventaja tiene usar R2DBC?","o":["Permite aplicaciones más reactivas y eficientes","Hace el código más lento","Solo sirve en la nube"],"a":0}
+]

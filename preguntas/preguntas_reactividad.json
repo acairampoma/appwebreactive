@@ -1,0 +1,22 @@
+[
+  {"q":"¿Qué es reactividad?","o":["Capacidad de reaccionar a cambios o eventos","Un tipo de virus","Un bug"],"a":0},
+  {"q":"¿Qué diferencia hay entre push y pull?","o":["Push: el productor envía; Pull: el consumidor pide","Push es más lento","Pull solo funciona en Python"],"a":0},
+  {"q":"¿Qué es un flujo frío?","o":["No emite datos hasta que hay suscriptor","Emite datos todo el tiempo","Congela la PC"],"a":0},
+  {"q":"¿Qué es un flujo caliente?","o":["Emite datos aunque no haya suscriptores","Solo emite si hay suscriptores","Quema la PC"],"a":0},
+  {"q":"¿Qué es backpressure?","o":["Controlar la velocidad de emisión para no saturar al consumidor","Presión en la espalda","Un bug"],"a":0},
+  {"q":"¿Qué hace el operador buffer?","o":["Agrupa elementos en lotes","Borra elementos","Convierte a String"],"a":0},
+  {"q":"¿Qué es un Observable?","o":["Un objeto que puede ser observado por otros","Un objeto invisible","Una variable global"],"a":0},
+  {"q":"¿Para qué sirve el operador debounce?","o":["Ignora eventos rápidos y solo emite el último","Duplica los eventos","Convierte a mayúsculas"],"a":0},
+  {"q":"¿Qué hace el operador merge?","o":["Combina varios flujos en uno solo","Divide un flujo","Convierte a String"],"a":0},
+  {"q":"¿Qué es un Subject en RxJava?","o":["Un objeto que es a la vez Observer y Observable","Un tema de colegio","Una variable global"],"a":0},
+  {"q":"¿Qué es un operador frío?","o":["No emite datos hasta que hay suscriptor","Emite datos todo el tiempo","Solo funciona en Python"],"a":0},
+  {"q":"¿Qué es un operador caliente?","o":["Emite datos aunque no haya suscriptores","Solo emite si hay suscriptores","Quema la PC"],"a":0},
+  {"q":"¿Qué hace el operador zip?","o":["Combina elementos de varios flujos en pares","Comprime archivos","Divide listas"],"a":0},
+  {"q":"¿Qué hace el operador concat?","o":["Concatena varios flujos uno tras otro","Convierte a mayúsculas","Borra elementos"],"a":0},
+  {"q":"¿Qué es un operador intermedio?","o":["Transforma el flujo pero no lo termina","Finaliza el flujo","Convierte a String"],"a":0},
+  {"q":"¿Qué hace el operador distinct?","o":["Elimina elementos duplicados","Convierte a String","Agrupa elementos"],"a":0},
+  {"q":"¿Qué es un operador terminal?","o":["Finaliza el flujo y produce un resultado","Convierte a String","Agrupa elementos"],"a":0},
+  {"q":"¿Qué es la suscripción perezosa?","o":["El flujo no se ejecuta hasta que alguien se suscribe","El flujo es lento","Solo funciona en Java"],"a":0},
+  {"q":"¿Qué es la propagación de cambios?","o":["Los cambios se reflejan automáticamente en los observadores","Solo funciona en Python","Un bug"],"a":0},
+  {"q":"¿Qué ventaja tiene la reactividad?","o":["Permite sistemas más flexibles y eficientes","Hace el código más lento","Solo sirve en la nube"],"a":0}
+]

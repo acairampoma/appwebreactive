@@ -1,0 +1,22 @@
+[
+  {"q":"¿Qué es una interfaz funcional en Java?","o":["Una interfaz con un solo método abstracto","Una interfaz con muchos métodos","Una clase abstracta"],"a":0},
+  {"q":"¿Qué anotación se usa para marcar una interfaz funcional?","o":["@FunctionalInterface","@Override","@Interface"],"a":0},
+  {"q":"¿Qué es un método abstracto?","o":["Un método sin implementación","Un método privado","Un método estático"],"a":0},
+  {"q":"¿Qué es una expresión lambda?","o":["Una función anónima y compacta","Un tipo de variable","Un error de compilación"],"a":0},
+  {"q":"¿Qué interfaz funcional representa una operación que recibe un argumento y no devuelve nada?","o":["Consumer<T>","Supplier<T>","Function<T,R>"],"a":0},
+  {"q":"¿Qué interfaz funcional representa una operación que recibe un argumento y devuelve un resultado?","o":["Function<T,R>","Consumer<T>","Predicate<T>"],"a":0},
+  {"q":"¿Qué interfaz funcional representa una operación que devuelve un booleano?","o":["Predicate<T>","Function<T,R>","Supplier<T>"],"a":0},
+  {"q":"¿Qué interfaz funcional no recibe argumentos y devuelve un resultado?","o":["Supplier<T>","Consumer<T>","Predicate<T>"],"a":0},
+  {"q":"¿Qué hace la interfaz Runnable?","o":["Define un método run() para ejecutar código en un hilo","Define un método eat()","Define un método print()"],"a":0},
+  {"q":"¿Qué hace la interfaz Callable?","o":["Define un método call() que puede devolver un resultado y lanzar excepciones","Define un método run()","Define un método print()"],"a":0},
+  {"q":"¿Qué es una referencia a método?","o":["Una forma de referenciar un método existente con ::","Una variable global","Un tipo de error"],"a":0},
+  {"q":"¿Qué hace Function<T,R>?","o":["Recibe un argumento y devuelve un resultado","Recibe dos argumentos","No devuelve nada"],"a":0},
+  {"q":"¿Qué hace Predicate<T>?","o":["Evalúa una condición y devuelve booleano","Recibe dos argumentos","No devuelve nada"],"a":0},
+  {"q":"¿Qué hace Consumer<T>?","o":["Recibe un argumento y no devuelve nada","Devuelve un resultado","Evalúa una condición"],"a":0},
+  {"q":"¿Qué hace Supplier<T>?","o":["No recibe argumentos y devuelve un resultado","Recibe un argumento y devuelve un resultado","Evalúa una condición"],"a":0},
+  {"q":"¿Qué ventaja tiene usar interfaces funcionales?","o":["Permiten usar lambdas y programación funcional","Hacen el código más lento","Solo sirven en entrevistas"],"a":0},
+  {"q":"¿Qué es una interfaz SAM?","o":["Single Abstract Method, interfaz funcional con un solo método abstracto","Interfaz para sumar","Un error de compilación"],"a":0},
+  {"q":"¿Qué hace BiFunction<T,U,R>?","o":["Recibe dos argumentos y devuelve un resultado","Recibe un argumento y devuelve dos resultados","No devuelve nada"],"a":0},
+  {"q":"¿Qué hace UnaryOperator<T>?","o":["Recibe un argumento y devuelve un resultado del mismo tipo","Recibe dos argumentos","No devuelve nada"],"a":0},
+  {"q":"¿Qué hace BinaryOperator<T>?","o":["Recibe dos argumentos y devuelve un resultado del mismo tipo","Recibe un argumento y devuelve un resultado","No devuelve nada"],"a":0}
+]

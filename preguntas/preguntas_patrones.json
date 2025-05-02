@@ -1,0 +1,22 @@
+[
+  {"q":"¿Qué es un patrón de diseño?","o":["Una solución probada a un problema común","Un dibujo bonito","Un bug"],"a":0},
+  {"q":"¿Cuál es el patrón Singleton?","o":["Permite una sola instancia de una clase","Crea muchas instancias","No sirve para nada"],"a":0},
+  {"q":"¿Para qué sirve el patrón Factory?","o":["Crear objetos sin exponer la lógica de creación","Hacer fábricas reales","Eliminar clases"],"a":0},
+  {"q":"¿Qué hace el patrón Observer?","o":["Permite notificar cambios a varios objetos","Observa el clima","Hace logging"],"a":0},
+  {"q":"¿Qué es el patrón Strategy?","o":["Permite cambiar el algoritmo en tiempo de ejecución","Estrategia de fútbol","Cambia el color del fondo"],"a":0},
+  {"q":"¿Qué es el patrón Decorator?","o":["Agrega funcionalidades a objetos de forma dinámica","Decora la pantalla","Borra métodos"],"a":0},
+  {"q":"¿Qué hace el patrón Adapter?","o":["Permite que dos interfaces incompatibles trabajen juntas","Adapta el tamaño de la pantalla","Cambia el idioma"],"a":0},
+  {"q":"¿Qué es el patrón Command?","o":["Encapsula una petición como un objeto","Manda comandos a la consola","Cambia el color del texto"],"a":0},
+  {"q":"¿Qué hace el patrón Facade?","o":["Proporciona una interfaz simple a un sistema complejo","Hace que todo sea público","Oculta errores"],"a":0},
+  {"q":"¿Qué es el patrón Proxy?","o":["Controla el acceso a un objeto","Proyecta imágenes","Cambia el fondo"],"a":0},
+  {"q":"¿Para qué sirve el patrón Builder?","o":["Construir objetos paso a paso","Construir edificios","Borrar variables"],"a":0},
+  {"q":"¿Qué es el patrón Composite?","o":["Permite tratar objetos individuales y compuestos de la misma forma","Compone canciones","Divide listas"],"a":0},
+  {"q":"¿Qué hace el patrón Template Method?","o":["Define el esqueleto de un algoritmo y deja que las subclases implementen partes","Crea plantillas de Word","Borra métodos"],"a":0},
+  {"q":"¿Qué es el patrón State?","o":["Permite cambiar el comportamiento de un objeto según su estado","Guarda el estado de la PC","Cambia el color del texto"],"a":0},
+  {"q":"¿Qué es el patrón Chain of Responsibility?","o":["Permite pasar una petición por una cadena de manejadores","Crea cadenas de texto","Borra variables"],"a":0},
+  {"q":"¿Qué es el patrón Iterator?","o":["Permite recorrer una colección sin exponer su estructura interna","Itera números","Cambia el fondo"],"a":0},
+  {"q":"¿Qué hace el patrón Mediator?","o":["Define un objeto que encapsula la comunicación entre objetos","Media discusiones","Cambia el idioma"],"a":0},
+  {"q":"¿Qué es el patrón Memento?","o":["Permite guardar y restaurar el estado de un objeto","Guarda memes","Borra variables"],"a":0},
+  {"q":"¿Qué es el patrón Flyweight?","o":["Minimiza el uso de memoria compartiendo datos entre objetos similares","Hace volar objetos","Cambia el color del texto"],"a":0},
+  {"q":"¿Qué es el patrón Bridge?","o":["Separa una abstracción de su implementación","Construye puentes","Divide listas"],"a":0}
+]

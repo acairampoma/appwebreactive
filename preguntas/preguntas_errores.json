@@ -1,0 +1,22 @@
+[
+  {"q":"¿Qué es el manejo de errores?","o":["Técnicas para controlar y responder a fallos en el código","Ignorar los errores","Borrar variables"],"a":0},
+  {"q":"¿Qué hace try-catch en Java?","o":["Captura y maneja excepciones","Hace el código más lento","Elimina variables"],"a":0},
+  {"q":"¿Qué es una excepción?","o":["Un evento que interrumpe el flujo normal del programa","Un tipo de variable","Un error de compilación"],"a":0},
+  {"q":"¿Qué es una excepción checked?","o":["Una excepción que debe ser manejada o declarada","Una excepción ignorada","Un error de sintaxis"],"a":0},
+  {"q":"¿Qué es una excepción unchecked?","o":["Una excepción que no es obligatoria manejar","Una excepción que siempre ocurre","Un error de compilación"],"a":0},
+  {"q":"¿Qué hace finally en un bloque try-catch-finally?","o":["Se ejecuta siempre, haya o no excepción","Solo se ejecuta si hay error","Elimina variables"],"a":0},
+  {"q":"¿Qué es un error fatal?","o":["Un error que termina la ejecución del programa","Un error leve","Un warning"],"a":0},
+  {"q":"¿Qué hace throw en Java?","o":["Lanza una excepción","Captura una excepción","Elimina variables"],"a":0},
+  {"q":"¿Qué es un stack trace?","o":["Una lista de llamadas que llevó al error","Una pila de datos","Un tipo de variable"],"a":0},
+  {"q":"¿Qué es una excepción personalizada?","o":["Una excepción definida por el programador","Una excepción que siempre ocurre","Un error de compilación"],"a":0},
+  {"q":"¿Qué hace el operador onErrorResume en programación reactiva?","o":["Permite manejar errores y devolver un flujo alternativo","Ignora el error","Elimina elementos"],"a":0},
+  {"q":"¿Qué hace el operador doOnError en programación reactiva?","o":["Ejecuta una acción cuando ocurre un error","Ignora el error","Elimina elementos"],"a":0},
+  {"q":"¿Qué es una excepción de negocio?","o":["Un error relacionado con la lógica de la aplicación","Un error de compilación","Un bug"],"a":0},
+  {"q":"¿Qué es la tolerancia a fallos?","o":["Capacidad del sistema para seguir funcionando ante errores","Ignorar los errores","Borrar variables"],"a":0},
+  {"q":"¿Qué es un Circuit Breaker?","o":["Un patrón para evitar fallos en cascada","Un interruptor eléctrico","Un tipo de error"],"a":0},
+  {"q":"¿Qué hace el patrón Retry?","o":["Intenta repetir una operación fallida","Ignora el error","Elimina variables"],"a":0},
+  {"q":"¿Qué es un fallback?","o":["Una alternativa en caso de error","Un error fatal","Un warning"],"a":0},
+  {"q":"¿Qué es logging de errores?","o":["Registrar información sobre los errores","Ignorar los errores","Borrar variables"],"a":0},
+  {"q":"¿Qué ventaja tiene manejar bien los errores?","o":["Sistemas más robustos y confiables","Hace el código más lento","Solo sirve en la nube"],"a":0},
+  {"q":"¿Qué es un error de concurrencia?","o":["Un error por acceso simultáneo a recursos compartidos","Un error de compilación","Un bug de JavaScript"],"a":0}
+]

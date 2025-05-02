@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas por Nivel</title>
+    <link rel="stylesheet" href="pregunta.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Orbitron:wght@400;700;900&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Agregar SweetAlert2 para mensajes de éxito/fracaso -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="nav-header">
+        <div class="logo">
+            <span class="world">WORLD</span><span class="reactive">REACTIVE</span>
+        </div>
+        <a href="../index.html" class="back-button" title="Volver a la página principal">
+            <i class="fas fa-chevron-left"></i>
+        </a>
+    </div>
+    
+    <div class="pregunta-container">
+        <h2 id="nivel-titulo" class="pildora-title quiz-title">Entrenemos juntos</h2>
+        <select id="tema-combo" class="tema-select"></select>
+        <div id="preguntas-lista" class="preguntas-lista"></div>
+    </div>
+    <!-- Las preguntas se cargan dinámicamente desde los archivos JSON en /preguntas/ -->
+    <script src="../js/preguntas2.js"></script>
+    <!-- Agregar librería de animaciones para SweetAlert2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</body>
+</html>

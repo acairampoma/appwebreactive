@@ -1,0 +1,22 @@
+[
+  {"q":"¿Qué es programación reactiva?","o":["Un paradigma para manejar flujos de datos asíncronos","Un nuevo framework de moda","Un tipo de base de datos"],"a":0},
+  {"q":"¿Qué librería Java es clave en programación reactiva?","o":["Project Reactor","Spring Boot","JUnit"],"a":0},
+  {"q":"¿Qué es un flujo frío?","o":["Un flujo que no emite datos hasta que hay suscriptor","Un flujo que congela la PC","Un error de red"],"a":0},
+  {"q":"¿Qué es un flujo caliente?","o":["Un flujo que emite datos aunque no haya suscriptores","Un bug","Una función secreta"],"a":0},
+  {"q":"¿Qué es backpressure?","o":["Mecanismo para controlar la velocidad de emisión de datos","Presión en la espalda","Un error de compilación"],"a":0},
+  {"q":"¿Qué hace el operador map en programación reactiva?","o":["Transforma cada elemento del flujo","Multiplica los datos","Elimina elementos"],"a":0},
+  {"q":"¿Qué es un Subscriber?","o":["Un objeto que consume los datos de un flujo","Un correo electrónico","Un tipo de variable"],"a":0},
+  {"q":"¿Qué es un Publisher?","o":["Un objeto que emite datos en un flujo","Un editor de texto","Una función de JavaScript"],"a":0},
+  {"q":"¿Qué hace el operador filter en programación reactiva?","o":["Filtra los elementos que cumplen una condición","Convierte a mayúsculas","Divide listas"],"a":0},
+  {"q":"¿Qué es un Mono en Project Reactor?","o":["Un flujo que emite cero o un elemento","Un mono de zoológico","Un tipo de error"],"a":0},
+  {"q":"¿Qué es un Flux en Project Reactor?","o":["Un flujo que puede emitir muchos elementos","Un flujo de agua","Un tipo de variable"],"a":0},
+  {"q":"¿Qué hace el operador flatMap en programación reactiva?","o":["Aplana flujos anidados","Convierte a String","Elimina los null"],"a":0},
+  {"q":"¿Para qué sirve subscribe()?","o":["Para empezar a consumir el flujo de datos","Para suscribirte a Netflix","Para borrar datos"],"a":0},
+  {"q":"¿Qué es un error terminal en programación reactiva?","o":["Un error que termina el flujo","Un error en la terminal","Un bug de JavaScript"],"a":0},
+  {"q":"¿Qué es un operador en programación reactiva?","o":["Una función que transforma o manipula un flujo","Un operador de telefonía","Un símbolo matemático"],"a":0},
+  {"q":"¿Qué es la reactividad push?","o":["El productor empuja los datos al consumidor","El consumidor pide los datos","Solo aplica en Python"],"a":0},
+  {"q":"¿Qué es la reactividad pull?","o":["El consumidor pide los datos al productor","El productor empuja los datos","Solo aplica en Java"],"a":0},
+  {"q":"¿Qué ventaja tiene la programación reactiva?","o":["Mejor manejo de concurrencia y recursos","Hace el código más lento","Solo sirve en la nube"],"a":0},
+  {"q":"¿Qué es un operador terminal?","o":["Un operador que finaliza el flujo y produce un resultado","Un operador de telefonía","Un error de compilación"],"a":0},
+  {"q":"¿Qué es la propagación de cambios?","o":["Cuando una modificación se refleja automáticamente en los suscriptores","Cuando cambia el clima","Un error de red"],"a":0}
+]

@@ -313,6 +313,8 @@ p {
     margin-right: 0 !important;
     box-sizing: border-box;
 }
+
+.about-block {
     font-family: var(--font-primary), 'Roboto', Arial, sans-serif;
     font-size: 1.7rem;
     color: var(--color-text-primary);
@@ -553,12 +555,14 @@ p {
 }
 
 /* ========== PLANES CARDS ========== */
-.plans-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-    margin-top: 2.5rem;
+.training-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+    align-items: stretch;
+    margin-bottom: 2.5rem;
 }
 .plan-card {
     background: #18182a;
@@ -676,6 +680,9 @@ p {
     border: 2.5px solid var(--color-secondary);
     background: #1a1a2e;
 }
+.pill-card.entrena-pill {
+    border: none;
+}
 @media (max-width: 900px) {
     .plans-cards {
         flex-direction: column;
@@ -685,6 +692,14 @@ p {
         max-width: 95%;
         width: 100%;
     }
+}
+
+.plans-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2.5rem;
 }
 
 .plan-hour-box {
@@ -1210,17 +1225,12 @@ p {
         top: auto;
         right: auto;
         bottom: auto;
-        left: auto;
-    }
 }
-
-@media (max-width: 768px) {
-    /* Mantén las otras reglas y ajusta estas específicas */
     
-    .bionic-man,
-    .bionic-woman {
-        width: 85%;
-        max-width: 270px;
+.hero-content {
+margin-bottom: 50px;
+text-align: center;
+max-width: 90%;
         height: 180px;  /* Altura más reducida */
     }
     

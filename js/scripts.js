@@ -63,19 +63,31 @@ document.addEventListener('DOMContentLoaded', function() {
             levelTabs.forEach(t => t.classList.remove('active'));
             tab.classList.add('active');
 
-            // Actualizar contenido activo
+            // Mostrar solo el contenido del tab activo
             levelContents.forEach(content => {
-                content.classList.remove('active');
-                if (content.id === `${level}-content`) {
-                    content.classList.add('active');
-                }
+                content.style.display = 'none';
             });
+            const activeContent = document.getElementById(`${level}-content`);
+            if (activeContent) {
+                activeContent.style.display = 'block';
+            }
 
             // Asegurarse de que la pestaña de píldoras solo se active cuando se hace clic en ella
             if (level !== 'pills') {
                 const pillsTab = document.querySelector('.level-tab[data-level="pills"]');
                 if (pillsTab) pillsTab.classList.remove('active');
             }
+        });
+    });
+
+    // Añadir listeners a los botones de entrenamiento (entrena-pill)
+    const entrenaPills = document.querySelectorAll('.entrena-pill');
+    entrenaPills.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const nivel = btn.getAttribute('data-entrena-level');
+            // Primer tema por defecto
+            const tema = 'Programación Funcional';
+            window.location.href = `pregunta.html?nivel=${encodeURIComponent(nivel)}&tema=${encodeURIComponent(tema)}`;
         });
     });
 });

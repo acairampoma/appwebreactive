@@ -1,0 +1,22 @@
+[
+  {"q":"¿Para qué sirve SOLID, papu?","o":["Para decorar el código","Para escribir software mantenible y escalable","Para que el código pese más"],"a":1},
+  {"q":"¿Qué significa la S en SOLID?","o":["Single Responsibility Principle","Super rápido","Siempre igual"],"a":0},
+  {"q":"¿Qué significa la O en SOLID?","o":["Open/Closed Principle","Operación Compleja","Objeto Cerrado"],"a":0},
+  {"q":"¿Qué significa la L en SOLID?","o":["Liskov Substitution Principle","Lógica Simple","Lista de Objetos"],"a":0},
+  {"q":"¿Qué significa la I en SOLID?","o":["Interface Segregation Principle","Índice de Interfaces","Integración"],"a":0},
+  {"q":"¿Qué significa la D en SOLID?","o":["Dependency Inversion Principle","Desarrollo Directo","Dato Importante"],"a":0},
+  {"q":"¿Qué pasa si rompes la S de SOLID?","o":["Tu clase hace de todo y es difícil de mantener","El código corre más rápido","No pasa nada"],"a":0},
+  {"q":"¿Qué busca el principio O?","o":["Que el código sea abierto a extensión y cerrado a modificación","Que nadie vea tu código","Que todo sea público"],"a":0},
+  {"q":"¿Qué implica Liskov?","o":["Las subclases pueden reemplazar a las superclases sin romper nada","Puedes cambiar el nombre de las clases","Solo aplica en Python"],"a":0},
+  {"q":"¿Por qué es importante la segregación de interfaces?","o":["Para que las clases no implementen métodos que no usan","Para tener menos archivos","Para ahorrar memoria"],"a":0},
+  {"q":"¿Qué busca la inversión de dependencias?","o":["Que dependas de abstracciones, no de implementaciones","Que todo sea estático","Que uses solo variables locales"],"a":0},
+  {"q":"¿Qué es una abstracción?","o":["Una representación simplificada de algo complejo","Un error de compilación","Un tipo de variable"],"a":0},
+  {"q":"¿Qué es una interfaz?","o":["Un contrato que define métodos sin implementar","Una pantalla de usuario","Un tipo de variable"],"a":0},
+  {"q":"¿Qué es una clase concreta?","o":["Una clase que implementa todos sus métodos","Una clase que no hace nada","Una variable global"],"a":0},
+  {"q":"¿Por qué es malo tener clases gigantes?","o":["Porque son difíciles de testear y mantener","Porque ocupan más memoria","Porque suenan feo"],"a":0},
+  {"q":"¿Qué es el acoplamiento?","o":["Cuando una clase depende demasiado de otra","Cuando todo está separado","Cuando usas solo funciones"],"a":0},
+  {"q":"¿Qué es la cohesión?","o":["Que los métodos de una clase estén relacionados entre sí","Que todo esté mezclado","Que uses muchas variables"],"a":0},
+  {"q":"¿Por qué importa la cohesión?","o":["Porque facilita el mantenimiento y la comprensión","Porque hace el código más lento","Porque se ve bonito"],"a":0},
+  {"q":"¿Qué es la inversión de control?","o":["Delegar la gestión de dependencias a un framework o contenedor","Controlar todo manualmente","Invertir variables"],"a":0},
+  {"q":"¿Qué es un mock en testing?","o":["Un objeto simulado para pruebas","Un error de compilación","Un tipo de variable"],"a":0}
+]

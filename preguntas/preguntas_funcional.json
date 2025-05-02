@@ -1,0 +1,182 @@
+[
+  {
+    "q": "¿Para qué sirve la programación funcional, papu?",
+    "o": [
+      "Para hacer funciones que se ven bonitas",
+      "Para escribir código más limpio y evitar bugs",
+      "Para que el código corra más lento"
+    ],
+    "a": 1
+  },
+  {
+    "q": "¿Qué es una función pura?",
+    "o": [
+      "Una función que no cambia nada fuera de ella",
+      "Una función que usa azúcar",
+      "Una función que imprime por consola"
+    ],
+    "a": 0
+  },
+  {
+    "q": "¿Cuál es la chamba de un lambda en Java?",
+    "o": [
+      "Ser una función anónima y compacta",
+      "Hacer que el código pese más",
+      "Romper el código"
+    ],
+    "a": 0
+  },
+  {
+    "q": "¿Qué NO hace una función pura?",
+    "o": [
+      "Devuelve el mismo resultado siempre",
+      "Modifica variables globales",
+      "Depende solo de sus argumentos"
+    ],
+    "a": 1
+  },
+  {
+    "q": "¿Qué significa inmutabilidad?",
+    "o": [
+      "No se puede cambiar el valor de una variable",
+      "Se puede cambiar todo lo que quieras",
+      "Solo aplica en Python"
+    ],
+    "a": 0
+  },
+  {
+    "q": "¿Cuál es el operador para componer funciones en Java?",
+    "o": [
+      "compose() y andThen()",
+      "sumar() y restar()",
+      "join() y split()"
+    ],
+    "a": 0
+  },
+  {
+    "q": "¿Qué es un Stream en Java?",
+    "o": [
+      "Un flujo de datos para procesar colecciones",
+      "Una transmisión de Twitch",
+      "Un tipo de variable"
+    ],
+    "a": 0
+  },
+  {
+    "q": "¿Qué hace el método map() en un Stream?",
+    "o": [
+      "Transforma cada elemento",
+      "Borra elementos",
+      "Ordena la lista"
+    ],
+    "a": 0
+  },
+  {
+    "q": "¿Para qué sirve filter() en un Stream?",
+    "o": [
+      "Filtra los elementos según una condición",
+      "Convierte todo a mayúsculas",
+      "Multiplica los números"
+    ],
+    "a": 0
+  },
+  {
+    "q": "¿Qué hace collect() en un Stream?",
+    "o": [
+      "Junta los resultados en una colección",
+      "Divide los datos",
+      "Elimina duplicados"
+    ],
+    "a": 0
+  },
+  {
+    "q": "¿Qué es un Optional en Java?",
+    "o": [
+      "Un contenedor para evitar null",
+      "Una función secreta",
+      "Una variable global"
+    ],
+    "a": 0
+  },
+  {
+    "q": "¿Qué ventaja tiene usar funciones puras?",
+    "o": [
+      "Menos bugs y más fácil de testear",
+      "El código es más lento",
+      "Solo sirve en entrevistas"
+    ],
+    "a": 0
+  },
+  {
+    "q": "¿Qué es un side effect?",
+    "o": [
+      "Cuando una función cambia algo fuera de ella",
+      "Un efecto visual",
+      "Un error de compilación"
+    ],
+    "a": 0
+  },
+  {
+    "q": "¿Qué hace flatMap() en un Stream?",
+    "o": [
+      "Aplana estructuras anidadas",
+      "Convierte a String",
+      "Elimina los null"
+    ],
+    "a": 0
+  },
+  {
+    "q": "¿Qué es la recursividad?",
+    "o": [
+      "Una función que se llama a sí misma",
+      "Un bucle for",
+      "Un error de stack"
+    ],
+    "a": 0
+  },
+  {
+    "q": "¿Qué es la composición de funciones?",
+    "o": [
+      "Unir varias funciones en una sola",
+      "Sumar dos números",
+      "Dividir una lista"
+    ],
+    "a": 0
+  },
+  {
+    "q": "¿Qué hace reduce() en un Stream?",
+    "o": [
+      "Reduce todos los elementos a un solo valor",
+      "Divide la lista",
+      "Convierte a mayúsculas"
+    ],
+    "a": 0
+  },
+  {
+    "q": "¿Qué es la currificación?",
+    "o": [
+      "Transformar una función de varios argumentos en varias de un solo argumento",
+      "Cocinar curry",
+      "Dividir una función"
+    ],
+    "a": 0
+  },
+  {
+    "q": "¿Qué NO es una función de orden superior?",
+    "o": [
+      "Una función que no recibe ni devuelve funciones",
+      "Recibe o devuelve funciones",
+      "Sirve solo en JavaScript"
+    ],
+    "a": 0
+  },
+  {
+    "q": "¿Qué significa referencialmente transparente?",
+    "o": [
+      "Siempre devuelve el mismo resultado con los mismos argumentos",
+      "Depende del clima",
+      "Solo aplica en C++"
+    ],
+    "a": 0
+  }
+]
