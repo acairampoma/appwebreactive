@@ -30,6 +30,8 @@ body {
     color: var(--color-text-primary);
     background-color: var(--color-dark);
 }
+.name-link { text-decoration: none; color: inherit; display: inline-block; cursor: pointer; }
+.name-link:hover .name-gradient { filter: brightness(1.15); }
 .cv-container {
     display: flex;
     max-width: 1000px;
@@ -387,6 +389,7 @@ transition: all 0.3s ease;
 
     /* Topbar */
     .m-topbar { display: flex; align-items: center; justify-content: space-between; padding: 14px 16px 8px; }
+    .m-topbar-brand { text-decoration: none; color: inherit; display: flex; min-width: 0; }
     .m-topbar-name { font-family: var(--font-secondary); font-weight: 900; font-size: 1.12rem; letter-spacing: .5px; }
     .m-topbar-role { font-family: var(--font-primary); font-weight: 400; font-size: .7rem; color: #9aa4b2; margin-top: 2px; letter-spacing: 0; }
     .m-menu-btn { width: 44px; height: 38px; border-radius: 10px; border: 1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.04); color: #e6edf3; font-size: 1.05rem; display: flex; align-items: center; justify-content: center; }
@@ -409,6 +412,7 @@ transition: all 0.3s ease;
     .m-contacts a.m-c-mail { background: linear-gradient(135deg,#7b2ff7,#9c27b0); }
     .m-contacts a.m-c-in { background: var(--color-secondary); }
     .m-contacts a.m-c-gh { background: #2a2f3a; }
+    .m-contacts a.m-c-wa { background: #25d366; }
     .m-loc { font-size: .74rem; color: #cbd5e1; display: flex; align-items: center; gap: 5px; }
 
     .m-quick { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 14px; }
