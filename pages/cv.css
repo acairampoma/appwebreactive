@@ -410,7 +410,7 @@ transition: all 0.3s ease;
     .m-contacts a.m-c-mail { background: linear-gradient(135deg,#7b2ff7,#9c27b0); }
     .m-contacts a.m-c-in { background: var(--color-secondary); }
     .m-contacts a.m-c-gh { background: #2a2f3a; }
-    .m-loc { margin-left: auto; font-size: .74rem; color: #cbd5e1; display: flex; align-items: center; gap: 5px; }
+    .m-loc { font-size: .74rem; color: #cbd5e1; display: flex; align-items: center; gap: 5px; }
 
     .m-quick { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 14px; }
     .m-quick-card { background: #0e1420; border: 1px solid rgba(255,255,255,.06); border-radius: 12px; padding: 8px 4px; text-align: center; }
@@ -433,10 +433,10 @@ transition: all 0.3s ease;
     /* Timeline experiencia */
     .m-timeline { position: relative; }
     .m-timeline::before { content: ''; position: absolute; left: 7px; top: 8px; bottom: 10px; width: 2px; background: linear-gradient(#7b2ff7,#2196f3); opacity: .45; }
-    .m-tl-item { position: relative; display: grid; grid-template-columns: 54px 1fr; column-gap: 10px; padding: 0 0 16px 22px; }
+    .m-tl-item { position: relative; display: grid; grid-template-columns: 68px 1fr; column-gap: 12px; padding: 0 0 18px 22px; }
     .m-tl-item::before { content: ''; position: absolute; left: 2px; top: 4px; width: 12px; height: 12px; border-radius: 50%; background: #7b2ff7; border: 2px solid #0b0f1a; box-shadow: 0 0 8px rgba(123,47,247,.8); }
-    .m-tl-date { grid-column: 1; grid-row: 1; font-size: .58rem; color: #9aa4b2; margin-bottom: 6px; }
-    .m-tl-logo { grid-column: 1; grid-row: 2; width: 54px; height: 36px; border-radius: 8px; background: #fff; display: flex; align-items: center; justify-content: center; padding: 4px; overflow: hidden; }
+    .m-tl-date { grid-column: 1; grid-row: 1; font-size: .58rem; color: #9aa4b2; margin-bottom: 10px; }
+    .m-tl-logo { grid-column: 1; grid-row: 2; width: 66px; height: 44px; border-radius: 9px; background: #fff; display: flex; align-items: center; justify-content: center; padding: 6px; overflow: hidden; }
     .m-tl-logo img { width: 100%; height: 100%; object-fit: contain; display: block; }
     .m-tl-body { grid-column: 2; grid-row: 1 / span 2; }
     .m-tl-title { font-size: .82rem; font-weight: 700; color: var(--color-secondary-light); }
