@@ -558,26 +558,5 @@
       </div>
      </div>
     </div>
-    <script>
-        (function () {
-            function fit() {
-                if (window.innerWidth > 768) return;
-                var stage = document.querySelector('.m-stage');
-                if (!stage) return;
-                stage.style.transform = 'none';
-                var sw = stage.offsetWidth, sh = stage.offsetHeight;
-                var vw = window.innerWidth, vh = window.innerHeight;
-                var k = Math.min(vw / sw, vh / sh);
-                var x = (vw - sw * k) / 2, y = (vh - sh * k) / 2;
-                stage.style.transform = 'translate(' + x + 'px,' + y + 'px) scale(' + k + ')';
-            }
-            window.addEventListener('load', fit);
-            window.addEventListener('resize', fit);
-            window.addEventListener('orientationchange', fit);
-            if (document.fonts && document.fonts.ready) { document.fonts.ready.then(fit); }
-            setTimeout(fit, 60);
-            fit();
-        })();
-    </script>
 </body>
 </html>

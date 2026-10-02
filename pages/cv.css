@@ -371,14 +371,13 @@ transition: all 0.3s ease;
 
     .cv-mobile {
         display: block;
-        position: fixed;
-        inset: 0;
-        overflow: hidden;
         background: #0b0f1a;
+        min-height: 100vh;
+        padding-bottom: 92px;
         color: var(--color-text-primary);
     }
-    .m-viewport { position: absolute; inset: 0; overflow: hidden; }
-    .m-stage { position: absolute; top: 0; left: 0; width: 640px; background: #0b0f1a; padding-bottom: 16px; transform-origin: top left; will-change: transform; }
+    .m-viewport { display: block; }
+    .m-stage { display: block; width: 100%; max-width: 480px; margin: 0 auto; background: #0b0f1a; }
     .cv-mobile a { text-decoration: none; }
     .m-white { color: #fff; }
     .m-grad {
@@ -474,5 +473,5 @@ transition: all 0.3s ease;
     .m-lang small { width: 54px; text-align: right; color: #9aa4b2; font-size: .56rem; }
 
     /* Botón fijo */
-    .m-contact-btn { position: static; margin: 6px 12px 0; background: linear-gradient(90deg,#2f6bff,#7b2ff7); color: #fff; text-align: center; padding: 14px; border-radius: 999px; font-weight: 700; font-size: .9rem; box-shadow: 0 8px 24px rgba(47,107,255,.35); z-index: 50; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    .m-contact-btn { position: fixed; left: 12px; right: 12px; bottom: 12px; background: linear-gradient(90deg,#2f6bff,#7b2ff7); color: #fff; text-align: center; padding: 14px; border-radius: 999px; font-weight: 700; font-size: .9rem; box-shadow: 0 8px 24px rgba(47,107,255,.35); z-index: 50; display: flex; align-items: center; justify-content: center; gap: 8px; }
 }
