@@ -371,11 +371,14 @@ transition: all 0.3s ease;
 
     .cv-mobile {
         display: block;
+        position: fixed;
+        inset: 0;
+        overflow: hidden;
         background: #0b0f1a;
-        min-height: 100vh;
-        padding-bottom: 96px;
         color: var(--color-text-primary);
     }
+    .m-viewport { position: absolute; inset: 0; overflow: hidden; }
+    .m-stage { position: absolute; top: 0; left: 0; width: 640px; background: #0b0f1a; padding-bottom: 16px; transform-origin: top left; will-change: transform; }
     .cv-mobile a { text-decoration: none; }
     .m-white { color: #fff; }
     .m-grad {
@@ -433,11 +436,8 @@ transition: all 0.3s ease;
     .m-tl-item { position: relative; display: grid; grid-template-columns: 54px 1fr; column-gap: 10px; padding: 0 0 16px 22px; }
     .m-tl-item::before { content: ''; position: absolute; left: 2px; top: 4px; width: 12px; height: 12px; border-radius: 50%; background: #7b2ff7; border: 2px solid #0b0f1a; box-shadow: 0 0 8px rgba(123,47,247,.8); }
     .m-tl-date { grid-column: 1; grid-row: 1; font-size: .58rem; color: #9aa4b2; margin-bottom: 6px; }
-    .m-tl-logo { grid-column: 1; grid-row: 2; width: 52px; height: 34px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: .56rem; font-weight: 800; color: #fff; text-align: center; line-height: 1.05; padding: 2px; letter-spacing: -.2px; }
-    .m-logo-interbank { background: #0a8f4d; }
-    .m-logo-ntt { background: #0b4da2; }
-    .m-logo-pacifico { background: #0a58a6; }
-    .m-logo-bcp { background: #f36c21; }
+    .m-tl-logo { grid-column: 1; grid-row: 2; width: 54px; height: 36px; border-radius: 8px; background: #fff; display: flex; align-items: center; justify-content: center; padding: 4px; overflow: hidden; }
+    .m-tl-logo img { width: 100%; height: 100%; object-fit: contain; display: block; }
     .m-tl-body { grid-column: 2; grid-row: 1 / span 2; }
     .m-tl-title { font-size: .82rem; font-weight: 700; color: var(--color-secondary-light); }
     .m-pill { display: inline-block; background: linear-gradient(90deg,#7b2ff7,#9c27b0); color: #fff; font-size: .56rem; padding: 2px 8px; border-radius: 999px; margin: 4px 0 5px; }
@@ -474,5 +474,5 @@ transition: all 0.3s ease;
     .m-lang small { width: 54px; text-align: right; color: #9aa4b2; font-size: .56rem; }
 
     /* Botón fijo */
-    .m-contact-btn { position: fixed; left: 12px; right: 12px; bottom: 12px; background: linear-gradient(90deg,#2f6bff,#7b2ff7); color: #fff; text-align: center; padding: 14px; border-radius: 999px; font-weight: 700; font-size: .9rem; box-shadow: 0 8px 24px rgba(47,107,255,.35); z-index: 50; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    .m-contact-btn { position: static; margin: 6px 12px 0; background: linear-gradient(90deg,#2f6bff,#7b2ff7); color: #fff; text-align: center; padding: 14px; border-radius: 999px; font-weight: 700; font-size: .9rem; box-shadow: 0 8px 24px rgba(47,107,255,.35); z-index: 50; display: flex; align-items: center; justify-content: center; gap: 8px; }
 }

@@ -19,7 +19,8 @@
     
     <script type="module">
         import { exportCvToPdf } from '../js/cv-export.js';
-        document.getElementById('btn-export-pdf').onclick = exportCvToPdf;
+        const btnExport = document.getElementById('btn-export-pdf');
+        if (btnExport) btnExport.onclick = exportCvToPdf;
     </script>
     <div class="cv-container">
         <!-- Sidebar - Columna Izquierda -->
@@ -409,6 +410,8 @@
 
     <!-- ====== VISTA MÓVIL (mockup app) ====== -->
     <div class="cv-mobile">
+     <div class="m-viewport">
+      <div class="m-stage">
         <header class="m-topbar">
             <div class="m-topbar-name"><span class="m-white">ALAN</span> <span class="m-grad">CAIRAMPOMA</span>
                 <div class="m-topbar-role">Senior Java Developer &amp; Cloud Architect</div>
@@ -448,7 +451,7 @@
             <div class="m-timeline">
                 <div class="m-tl-item">
                     <div class="m-tl-date">2026 - Actualidad</div>
-                    <div class="m-tl-logo m-logo-interbank">Interbank</div>
+                    <div class="m-tl-logo"><img src="../assets/logos/interbank.png" alt="Interbank"></div>
                     <div class="m-tl-body">
                         <div class="m-tl-title">Cloud Developer Senior</div>
                         <span class="m-pill">INTERBANK</span>
@@ -458,7 +461,7 @@
                 </div>
                 <div class="m-tl-item">
                     <div class="m-tl-date">2025 - 2026</div>
-                    <div class="m-tl-logo m-logo-ntt">NTT DATA</div>
+                    <div class="m-tl-logo"><img src="../assets/logos/nttdata.png" alt="NTT DATA"></div>
                     <div class="m-tl-body">
                         <div class="m-tl-title">Especialista en IA - Agente Inteligente</div>
                         <span class="m-pill">NTT DATA</span>
@@ -468,7 +471,7 @@
                 </div>
                 <div class="m-tl-item">
                     <div class="m-tl-date">2025</div>
-                    <div class="m-tl-logo m-logo-pacifico">pacífico</div>
+                    <div class="m-tl-logo"><img src="../assets/logos/pacifico.png" alt="Pacífico"></div>
                     <div class="m-tl-body">
                         <div class="m-tl-title">Back Cloud Senior</div>
                         <span class="m-pill">NTT DATA – Pacífico Seguros</span>
@@ -478,7 +481,7 @@
                 </div>
                 <div class="m-tl-item">
                     <div class="m-tl-date">2023 - 2025</div>
-                    <div class="m-tl-logo m-logo-bcp">BCP</div>
+                    <div class="m-tl-logo"><img src="../assets/logos/bcp.png" alt="BCP"></div>
                     <div class="m-tl-body">
                         <div class="m-tl-title">Backend Developer Senior</div>
                         <span class="m-pill">NTT DATA – BCP</span>
@@ -552,6 +555,29 @@
         </div>
 
         <a class="m-contact-btn" href="mailto:acairampoma@gmail.com"><i class="fas fa-envelope"></i> Contáctame</a>
+      </div>
+     </div>
     </div>
+    <script>
+        (function () {
+            function fit() {
+                if (window.innerWidth > 768) return;
+                var stage = document.querySelector('.m-stage');
+                if (!stage) return;
+                stage.style.transform = 'none';
+                var sw = stage.offsetWidth, sh = stage.offsetHeight;
+                var vw = window.innerWidth, vh = window.innerHeight;
+                var k = Math.min(vw / sw, vh / sh);
+                var x = (vw - sw * k) / 2, y = (vh - sh * k) / 2;
+                stage.style.transform = 'translate(' + x + 'px,' + y + 'px) scale(' + k + ')';
+            }
+            window.addEventListener('load', fit);
+            window.addEventListener('resize', fit);
+            window.addEventListener('orientationchange', fit);
+            if (document.fonts && document.fonts.ready) { document.fonts.ready.then(fit); }
+            setTimeout(fit, 60);
+            fit();
+        })();
+    </script>
 </body>
 </html>
