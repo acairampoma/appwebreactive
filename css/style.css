@@ -866,6 +866,11 @@ p {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
+/* Compensa el header fijo: al saltar por ancla la sección no queda debajo del menú */
+[id] {
+    scroll-margin-top: 9rem;
+}
+
 .nav {
     display: flex;
     justify-content: space-between;
@@ -906,6 +911,7 @@ p {
     letter-spacing: 1px;
     position: relative;
     padding: 0.5rem 0;
+    white-space: nowrap; /* evita que la etiqueta se parta en 2 líneas */
 }
 
 .nav-link::after {
@@ -2060,6 +2066,27 @@ max-width: 90%;
         width: 350px;  /* Ajuste para tabletas */
         height: 200px; /* Altura más apropiada para layout vertical */
         margin: 0 auto;
+    }
+}
+
+/* Tablet: el menú horizontal no cabe -> usar hamburguesa antes (evita que los ítems se partan en 2 líneas) */
+@media (max-width: 992px) {
+    .nav {
+        justify-content: center;
+        position: relative;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .logo {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .hamburger {
+        display: block;
     }
 }
 

@@ -18,7 +18,39 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Inicializar las pestañas inmediatamente
     initializeTabs();
-    
+
+    // --- Scroll con offset correcto: alinea el TÍTULO de la sección bajo el header fijo ---
+    // (cada sección tiene padding-top distinto, por eso alinear la sección "corre" el título;
+    //  aqui alineamos el titulo -> mismo respiro en todas, en cualquier ancho).
+    function _headerH() {
+        const h = document.querySelector('.header');
+        return h ? h.offsetHeight : 0;
+    }
+    function irASeccion(id) {
+        const el = document.getElementById(id);
+        if (!el) return;
+        if (id === 'home') { window.scrollTo({ top: 0, behavior: _behav() }); return; }
+        const titulo = el.querySelector('.section-title, h1, h2') || el;
+        const y = titulo.getBoundingClientRect().top + window.pageYOffset - _headerH() - 16;
+        window.scrollTo({ top: Math.max(0, y), behavior: _behav() });
+    }
+    function _behav() {
+        return window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+        const href = a.getAttribute('href');
+        if (!href || href === '#') return;                 // dropdowns "#" se dejan pasar
+        if (!document.getElementById(href.slice(1))) return;
+        a.addEventListener('click', function(e) {
+            e.preventDefault();
+            irASeccion(href.slice(1));
+            history.pushState(null, '', href);             // mantiene el #id sin re-saltar
+        });
+    });
+    if (location.hash.length > 1) {                        // fallback: abre con #id directo
+        setTimeout(function() { irASeccion(location.hash.slice(1)); }, 80);
+    }
+
     // Obtener elementos del DOM
     const hamburger = document.getElementById('hamburger');
     const menu = document.getElementById('menu');
