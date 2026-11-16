@@ -1,0 +1,29 @@
+/* Asistente cognitivo WorldReactive (Empaty) */
+#crc-bubble{position:fixed;right:18px;bottom:18px;width:60px;height:60px;border-radius:50%;border:0;cursor:pointer;
+  background:linear-gradient(135deg,#7c3aed,#2563eb);color:#fff;box-shadow:0 12px 30px #0006;z-index:99998;
+  display:flex;align-items:center;justify-content:center;font-size:26px;transition:transform .15s ease}
+#crc-bubble:hover{transform:scale(1.06)}
+#crc-panel{position:fixed;right:18px;bottom:90px;width:370px;max-width:calc(100vw - 24px);height:540px;max-height:calc(100vh - 120px);
+  background:#0f172a;color:#e5edf7;border:1px solid #29405e;border-radius:16px;box-shadow:0 24px 60px #000b;
+  z-index:99999;display:none;flex-direction:column;overflow:hidden;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+#crc-panel.open{display:flex}
+.crc-head{background:linear-gradient(135deg,#6d28d9,#2563eb);padding:12px 14px;display:flex;align-items:center;gap:10px}
+.crc-head .t{line-height:1.15}
+.crc-head b{font-size:14px;letter-spacing:.2px}
+.crc-head small{opacity:.9;font-size:11px}
+.crc-x{margin-left:auto;background:transparent;border:0;color:#fff;font-size:20px;cursor:pointer;line-height:1}
+.crc-log{flex:1;overflow:auto;padding:12px;display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:1.45}
+.crc-msg{max-width:86%;padding:9px 12px;border-radius:12px;white-space:pre-line;overflow-wrap:anywhere}
+.crc-bot{background:#1e293b;align-self:flex-start;border-bottom-left-radius:4px}
+.crc-user{background:#2563eb;color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
+.crc-typing{color:#9fb3cc;font-style:italic;font-size:13px;background:transparent}
+.crc-form{display:flex;gap:8px;padding:10px;border-top:1px solid #22334a}
+.crc-in{flex:1;background:#0b1220;border:1px solid #2b425f;color:#e5edf7;border-radius:10px;padding:10px 12px;font-size:14px;outline:none}
+.crc-in:focus{border-color:#3b82f6}
+.crc-send{background:linear-gradient(135deg,#7c3aed,#2563eb);border:0;color:#fff;border-radius:10px;padding:0 14px;font-weight:700;cursor:pointer;font-size:16px}
+.crc-send:active{opacity:.85}
+@media(max-width:430px){#crc-panel{right:8px;left:8px;width:auto;bottom:84px;height:72vh}#crc-bubble{width:54px;height:54px;font-size:23px}}
+.crc-listen{margin-top:7px;display:inline-block;background:#1f3a5a;border:1px solid #2f5b86;color:#cfe3ff;border-radius:8px;padding:4px 9px;font-size:12px;cursor:pointer}
+.crc-listen:active{transform:scale(.97)}
+.crc-listen:disabled{opacity:.6;cursor:default}
