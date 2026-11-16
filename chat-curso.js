@@ -2,7 +2,10 @@
 (function () {
   var qs = new URLSearchParams(location.search);
   var API = qs.get('api') || window.CURSO_API_BASE || 'https://tienda.qadrante2.com';
-  var SES = 'crc-' + Math.random().toString(36).slice(2, 10);
+  var IDLE_MS = parseInt(qs.get('idle') || '60000', 10);
+  if (!IDLE_MS || IDLE_MS < 1000) IDLE_MS = 60000;
+  function newSES() { return 'crc-' + Math.random().toString(36).slice(2, 10); }
+  var SES = newSES();
 
   function el(t, c) { var e = document.createElement(t); if (c) e.className = c; return e; }
 
@@ -25,6 +28,23 @@
   var log = panel.querySelector('#crc-log');
   var input = panel.querySelector('#crc-in');
   var greeted = false;
+  var idleTimer = null, idleEnded = false;
+
+  function resetIdle() {
+    if (idleTimer) { clearTimeout(idleTimer); idleTimer = null; }
+    if (panel.classList.contains('open')) {
+      idleTimer = setTimeout(endSession, IDLE_MS);
+    }
+  }
+
+  function endSession() {
+    if (idleTimer) { clearTimeout(idleTimer); idleTimer = null; }
+    panel.classList.remove('open');
+    log.innerHTML = '';
+    greeted = false;
+    idleEnded = true;
+    SES = newSES();
+  }
 
   function mdToHtml(src) {
     var esc = String(src || '')
@@ -88,20 +108,33 @@
 
   function open() {
     panel.classList.add('open');
+    if (idleEnded) {
+      idleEnded = false;
+      add('Se cerró tu sesión por inactividad. Empecemos de nuevo 🙂');
+    }
     if (!greeted) {
       greeted = true;
       add('¡Hola! Soy tu **asesor** de WorldReactive. Te guío a la **píldora** y el **plan** ideal según lo que necesites. ¿Qué quieres aprender, reforzar o lograr?');
     }
     setTimeout(function () { input.focus(); }, 60);
+    resetIdle();
   }
 
   bubble.addEventListener('click', function () {
     if (panel.classList.contains('open')) panel.classList.remove('open'); else open();
   });
-  panel.querySelector('.crc-x').addEventListener('click', function () { panel.classList.remove('open'); });
+  panel.querySelector('.crc-x').addEventListener('click', function () {
+    panel.classList.remove('open');
+    if (idleTimer) { clearTimeout(idleTimer); idleTimer = null; }
+  });
+  ['input', 'keydown', 'mousemove', 'touchstart', 'pointerdown'].forEach(function (ev) {
+    panel.addEventListener(ev, resetIdle, { passive: true });
+  });
+  log.addEventListener('scroll', resetIdle, { passive: true });
 
   panel.querySelector('form').addEventListener('submit', function (e) {
     e.preventDefault();
+    resetIdle();
     var t = input.value.trim();
     if (!t) return;
     input.value = '';
@@ -118,9 +151,11 @@
     }).then(function (j) {
       typing.remove();
       add((j && j.texto) || 'No pude responder, intenta de nuevo.');
+      resetIdle();
     }).catch(function () {
       typing.remove();
       add('El asistente se está activando. Intenta de nuevo en un momento 🙂');
+      resetIdle();
     });
   });
 })();
