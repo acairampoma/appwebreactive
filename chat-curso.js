@@ -90,8 +90,7 @@
     panel.classList.add('open');
     if (!greeted) {
       greeted = true;
-      add('¡Hola! Soy el asistente del curso WorldReactive. Pregúntame sobre Java, ' +
-          'programación reactiva, patrones, SOLID, R2DBC o manejo de errores.');
+      add('¡Hola! Soy tu **asesor** de WorldReactive. Te guío a la **píldora** y el **plan** ideal según lo que necesites. ¿Qué quieres aprender, reforzar o lograr?');
     }
     setTimeout(function () { input.focus(); }, 60);
   }
