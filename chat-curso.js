@@ -114,7 +114,7 @@
     }
     if (!greeted) {
       greeted = true;
-      add('¡Hola! Soy tu **asesor** de WorldReactive. Te guío a la **píldora** y el **plan** ideal según lo que necesites. ¿Qué quieres aprender, reforzar o lograr?');
+      add('¡Hola! Soy tu **asesor** de WorldReactive. Para comenzar, regálame tu **nombre y apellido** y tu **correo**, por favor 🙂');
     }
     setTimeout(function () { input.focus(); }, 60);
     resetIdle();
